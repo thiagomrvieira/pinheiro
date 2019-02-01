@@ -11,14 +11,17 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/perguntas', function () {
-    return view('perguntas');
-});
-
+//Perguntas
+Route::get('/perguntas', 'controladorPerguntas@index');
 Route::get('/perguntas/novo', 'controladorPerguntas@create');
-
 Route::post('/perguntas', 'controladorPerguntas@store');
+
+//Telefones
+Route::get('/telefones', 'controladorTelefones@index');
+Route::get('/telefones/novo', 'controladorTelefones@create');
+Route::post('/telefones', 'controladorTelefones@store');

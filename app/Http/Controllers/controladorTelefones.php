@@ -4,9 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\perguntasFaq;
-
-class controladorPerguntas extends Controller
+class controladorTelefones extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +13,7 @@ class controladorPerguntas extends Controller
      */
     public function index()
     {
-        $perguntas = perguntasFaq::all();
-        return view('perguntas', compact('perguntas'));
+        return view('telefones');
     }
 
     /**
@@ -26,7 +23,7 @@ class controladorPerguntas extends Controller
      */
     public function create()
     {
-        return view('novaPergunta');
+        return view('novoTelefone');
     }
 
     /**
@@ -37,12 +34,11 @@ class controladorPerguntas extends Controller
      */
     public function store(Request $request)
     {
-        $pergunta = new perguntasFaq();
-        $pergunta->pergunta = $request->input('pergunta');
-        $pergunta->resposta = $request->input('resposta');
+        $telefone = new telefone();
+        $telefone->nome = $request->input('orgao');
+        $pergunta->numero = $request->input('telefone');
         $pergunta->save();
-        return redirect('/perguntas');
-        
+        return redirect('/telefones');
     }
 
     /**

@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\telefone;
+
+
 class controladorTelefones extends Controller
 {
     /**
@@ -13,7 +16,9 @@ class controladorTelefones extends Controller
      */
     public function index()
     {
-        return view('telefones');
+        $telefones = telefone::all();
+        return view('telefones', compact('telefones'));
+        
     }
 
     /**
@@ -36,8 +41,8 @@ class controladorTelefones extends Controller
     {
         $telefone = new telefone();
         $telefone->nome = $request->input('orgao');
-        $pergunta->numero = $request->input('telefone');
-        $pergunta->save();
+        $telefone->numero = $request->input('telefone');
+        $telefone->save();
         return redirect('/telefones');
     }
 

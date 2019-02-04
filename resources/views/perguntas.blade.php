@@ -1,14 +1,40 @@
 @extends('layout.app')
 
 @section('body')
-    <h1> Perguntas e Respostas</h1>
-  
-    @foreach($perguntas as $per)
+    <h1> Perguntas</h1>
 
-        <h4>Pergunta:</h4> {{$per->pergunta}} <br>
-        <h4>Resposta:</h4>{{$per->resposta}} <br>
-        <br>
+    <div class="card border">
+        <div class="card-body">
+            <h5 class= "card-title"> Perguntas e Respostas</h5>
+            <table class="table table-ordered table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Pergunta</th>
+                        <th>Resposta</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($perguntas as $per)
+                        <tr>
+                            <td>{{$per->id}}</td>
+                            <td>{{$per->pergunta}}</td>
+                            <td>{{$per->resposta}}</td>
+                            <td>
+                                <a href="telefones/editar/{$fone->id}" class="btn btn-sm btn-primary">Editar</a>
+                                <a href="telefones/apagar/{$fone->id}" class="btn btn-sm btn-danger">Apagar</a>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
     
-    @endforeach
+    </div>
+    <div class="card-footer">
+        <a href="/perguntas/novo" class="btn btn-sm btn-primary" role="button">Nova pergunta</a>
+    
+    </div>
 
 @endsection

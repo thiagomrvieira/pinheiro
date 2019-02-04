@@ -65,7 +65,11 @@ class controladorTelefones extends Controller
      */
     public function edit($id)
     {
-        //
+        $tel = telefone::find($id);
+        if (isset($tel)){
+            return view('editarTelefone', compact('tel'));
+        }
+        return redirect('telefones');
     }
 
     /**
@@ -88,6 +92,10 @@ class controladorTelefones extends Controller
      */
     public function destroy($id)
     {
-        //
+        $tel = telefone::find($id);
+        if (isset($tel)){
+            $tel->delete();
+        }
+        return redirect('telefones');
     }
 }

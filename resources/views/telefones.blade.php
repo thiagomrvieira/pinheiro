@@ -9,7 +9,8 @@
             <table class="table table-ordered table-hover">
                 <thead>
                     <tr>
-                        <th> Órgão </th>
+                        <th>ID</th>
+                        <th>Órgão</th>
                         <th>Telefone</th>
                         <th>Ações</th>
                     </tr>
@@ -17,11 +18,12 @@
                 <tbody>
                     @foreach ($telefones as $fone)
                         <tr>
+                            <td>{{$fone->id}}</td>
                             <td>{{$fone->nome}}</td>
                             <td>{{$fone->numero}}</td>
                             <td>
-                                <a href="telefones/editar/{$fone->id}" class="btn btn-sm btn-primary">Editar</a>
-                                <a href="telefones/apagar/{$fone->id}" class="btn btn-sm btn-danger">Apagar</a>
+                                <a href="telefones/editar/{{$fone->id}}" class="btn btn-sm btn-primary">Editar</a>
+                                <a href="telefones/apagar/{{$fone->id}}" class="btn btn-sm btn-danger">Apagar</a>
                             </td>
                         </tr>
                     @endforeach
@@ -32,7 +34,7 @@
     </div>
 
     <div class="card-footer">
-        <a href="/perguntas/novo" class="btn btn-sm btn-primary" role="button">Novo telefone</a>
+        <a href="/telefones/novo" class="btn btn-sm btn-primary" role="button">Novo telefone</a>
     
     </div>
     

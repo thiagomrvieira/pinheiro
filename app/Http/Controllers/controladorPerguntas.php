@@ -64,7 +64,11 @@ class controladorPerguntas extends Controller
      */
     public function edit($id)
     {
-        //
+        $pergunta = perguntasFaq::find($id);
+        if (isset($pergunta)){
+            return view('editarPergunta', compact('pergunta'));
+        }
+        return redirect('perguntas');
     }
 
     /**
@@ -76,7 +80,14 @@ class controladorPerguntas extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $pergunta = perguntasFaq::find($id);
+        if (isset($pergunta)){
+            $pergunta->pergunta = $request->input('pergunta');
+            $pergunta->resposta = $request->input('resposta');  
+            $pergunta->save();
+        }
+        
+        return redirect('perguntas');
     }
 
     /**
@@ -87,6 +98,10 @@ class controladorPerguntas extends Controller
      */
     public function destroy($id)
     {
-        //
+        $pergunta = perguntasFaq::find($id);
+        if (isset($pergunta)){
+            $pergunta->delete();
+        }
+        return redirect('perguntas');
     }
 }

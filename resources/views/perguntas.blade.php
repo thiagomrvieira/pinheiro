@@ -22,8 +22,8 @@
                             <td>{{$per->pergunta}}</td>
                             <td>{{$per->resposta}}</td>
                             <td>
-                                <a href="telefones/editar/{$fone->id}" class="btn btn-sm btn-primary">Editar</a>
-                                <a href="telefones/apagar/{$fone->id}" class="btn btn-sm btn-danger">Apagar</a>
+                                <a href="perguntas/editar/{{$per->id}}" class="btn btn-sm btn-primary">Editar</a>
+                                <a href="perguntas/apagar/{{$per->id}}" class="btn btn-sm btn-danger">Apagar</a>
                             </td>
                         </tr>
                     @endforeach

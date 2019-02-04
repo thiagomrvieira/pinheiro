@@ -16,7 +16,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Perguntas
+//PERGUNTAS
 Route::get('/perguntas', 'controladorPerguntas@index');
 Route::get('/perguntas/novo', 'controladorPerguntas@create');
 Route::post('/perguntas', 'controladorPerguntas@store');
@@ -24,10 +24,18 @@ Route::get('/perguntas/apagar/{id}', 'controladorPerguntas@destroy');
 Route::get('/perguntas/editar/{id}', 'controladorPerguntas@edit');
 Route::post('/perguntas/{id}', 'controladorPerguntas@update');
 
-//Telefones
+//TELEFONES
 Route::get('/telefones', 'controladorTelefones@index');
 Route::get('/telefones/novo', 'controladorTelefones@create');
 Route::post('/telefones', 'controladorTelefones@store');
 Route::get('/telefones/apagar/{id}', 'controladorTelefones@destroy');
 Route::get('/telefones/editar/{id}', 'controladorTelefones@edit');
 Route::post('/telefones/{id}', 'controladorTelefones@update');
+
+//NOTÍCIAS
+Route::get('/noticias', 'controladorNoticias@index');
+Route::get('/noticias/novo', 'controladorNoticias@create');
+Route::post('/noticias', 'controladorNoticias@store');
+Route::get('/noticias/apagar/{id}', 'controladorNoticias@destroy');
+Route::get('noticias/editar/{id}', 'controladorNoticias@edit');
+Route::post('/noticias/{id}', 'controladorNoticias@update');

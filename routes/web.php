@@ -30,3 +30,4 @@ Route::get('/telefones/novo', 'controladorTelefones@create');
 Route::post('/telefones', 'controladorTelefones@store');
 Route::get('/telefones/apagar/{id}', 'controladorTelefones@destroy');
 Route::get('/telefones/editar/{id}', 'controladorTelefones@edit');
+Route::post('/telefones/{id}', 'controladorTelefones@update');

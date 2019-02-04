@@ -81,7 +81,14 @@ class controladorTelefones extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $telefone = telefone::find($id);
+        if (isset($telefone)){
+            $telefone->nome = $request->input('orgao');
+            $telefone->numero = $request->input('telefone');  
+            $telefone->save();
+        }
+        
+        return redirect('telefones');
     }
 
     /**

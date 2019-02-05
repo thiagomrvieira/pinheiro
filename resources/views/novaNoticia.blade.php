@@ -4,9 +4,12 @@
     <h1> Nova Notícia </h1>
 
 
-    <form action="/noticias" method="POST">
+    <form action="/noticias" method="POST" enctype="multipart/form-data">
         @csrf
-        
+        <div class="form-group">
+            <label for="imagem">Imagem</label>
+            <input type='file' id="imagemCapa" name="imagemCapa"/>
+        </div>
         <div class="form-group">
             <label for="titulo">Título</label>
             <input type="text" class="form-control" name="titulo" id="titulo">
@@ -30,7 +33,7 @@
         </div>
         
         <button type="submit" class="btn btn-primary">Enviar</button>
-        <button type="cancel" class="btn btn-danger">Cancelar</button>
+        <input type="button" name="Cancel" class="btn btn-danger" value="Cancel" onclick="window.location = '/noticias' " />
     </form>
 
 

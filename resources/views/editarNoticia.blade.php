@@ -4,7 +4,7 @@
     <h1> Editar pergunta</h1>
 
 
-    <form action="/noticias/{{$noticia->id}}" method="POST">
+    <form action="/noticias/{{$noticia->id}}" method="POST" style="padding-bottom: 25px;">
         @csrf
         <div class="form-group">
             <label for="titulo">Título</label>
@@ -29,7 +29,7 @@
         </div>
         
         <button type="submit" class="btn btn-primary">Enviar</button>
-        <button type="cancel" class="btn btn-danger">Cancelar</button>
+        <input type="button" name="Cancel" class="btn btn-danger" value="Cancel" onclick="window.location = '/noticias' " />
     </form>
 
 

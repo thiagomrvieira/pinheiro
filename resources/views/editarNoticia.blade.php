@@ -24,7 +24,7 @@
         </div>
         <div class="form-group">
             <label for="texto">Texto</label>
-            <textarea class="form-control" id="texto" name="texto" rows="7"></textarea value="{{$noticia->texto}}">
+            <textarea class="form-control" id="texto" name="texto" rows="7"> {{$noticia->texto}} </textarea >
              
         </div>
         

@@ -26,7 +26,7 @@
                             <td>{{$not->chapeu}}</td>
                             <td>{{$not->intro}}</td>
                             <td>{{$not->reporter}}</td>
-                            <td>{{$not->texto}}</td>
+                            <td>{!!$not->texto!!}</td>
                             <td>
                                 <a href="noticias/editar/{{$not->id}}" class="btn btn-sm btn-primary">Editar</a>
                                 <a href="noticias/apagar/{{$not->id}}" class="btn btn-sm btn-danger">Apagar</a>

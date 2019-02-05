@@ -39,3 +39,6 @@ Route::post('/noticias', 'controladorNoticias@store');
 Route::get('/noticias/apagar/{id}', 'controladorNoticias@destroy');
 Route::get('noticias/editar/{id}', 'controladorNoticias@edit');
 Route::post('/noticias/{id}', 'controladorNoticias@update');
+
+Route::get('summernote',array('as'=>'summernote.get','uses'=>'FileController@getSummernote'));
+Route::post('summernote',array('as'=>'summernote.post','uses'=>'FileController@postSummernote'));

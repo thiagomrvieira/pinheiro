@@ -16,8 +16,7 @@
         </div>
         
         <button type="submit" class="btn btn-primary">Enviar</button>
-        <button type="cancel" class="btn btn-danger">Cancelar</button>
-    </form>
+        <input type="button" name="Cancel" class="btn btn-danger" value="Cancel" onclick="window.location = '/telefones' " />
 
     
 @endsection

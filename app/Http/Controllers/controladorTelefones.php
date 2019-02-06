@@ -42,6 +42,7 @@ class controladorTelefones extends Controller
         $telefone = new telefone();
         $telefone->nome = $request->input('orgao');
         $telefone->numero = $request->input('telefone');
+        $telefone->competencias = $request->input('competencias');
         $telefone->save();
         return redirect('/telefones');
     }
@@ -84,7 +85,8 @@ class controladorTelefones extends Controller
         $telefone = telefone::find($id);
         if (isset($telefone)){
             $telefone->nome = $request->input('orgao');
-            $telefone->numero = $request->input('telefone');  
+            $telefone->numero = $request->input('telefone');
+            $telefone->competencias = $request->input('competencias');  
             $telefone->save();
         }
         

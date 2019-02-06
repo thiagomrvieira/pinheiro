@@ -12,6 +12,7 @@
                         <th>ID</th>
                         <th>Órgão</th>
                         <th>Telefone</th>
+                        <th>Competências</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -21,9 +22,10 @@
                             <td>{{$fone->id}}</td>
                             <td>{{$fone->nome}}</td>
                             <td>{{$fone->numero}}</td>
+                            <td>{!!$fone->competencias!!}</td>
                             <td>
-                                <a href="telefones/editar/{{$fone->id}}" class="btn btn-sm btn-primary">Editar</a>
-                                <a href="telefones/apagar/{{$fone->id}}" class="btn btn-sm btn-danger">Apagar</a>
+                                <a href="/telefones/editar/{{$fone->id}}" class="btn btn-sm btn-primary">Editar</a>
+                                <a href="/telefones/apagar/{{$fone->id}}" class="btn btn-sm btn-danger">Apagar</a>
                             </td>
                         </tr>
                     @endforeach

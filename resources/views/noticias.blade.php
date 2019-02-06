@@ -11,6 +11,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Título</th>
+                        <th>Imagem</th>
                         <th>Chapéu</th>
                         <th>Intro</th>
                         <th>Repórter</th>
@@ -23,6 +24,7 @@
                         <tr>
                             <td>{{$not->id}}</td>
                             <td>{{$not->titulo}}</td>
+                            <td>{{$not->imagemCapa}}</td>
                             <td>{{$not->chapeu}}</td>
                             <td>{{$not->intro}}</td>
                             <td>{{$not->reporter}}</td>

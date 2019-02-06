@@ -7,6 +7,10 @@
     <form action="/noticias/{{$noticia->id}}" method="POST" style="padding-bottom: 25px;">
         @csrf
         <div class="form-group">
+            <label for="imagem">Imagem</label>
+            <input type='file' id="imagemCapa" name="imagemCapa" value="{{$noticia->imagemCapa}}"/>
+        </div>
+        <div class="form-group">
             <label for="titulo">Título</label>
             <input type="text" class="form-control" name="titulo" id="titulo" value="{{$noticia->titulo}}">
         </div>

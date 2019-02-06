@@ -40,5 +40,12 @@ Route::get('/noticias/apagar/{id}', 'controladorNoticias@destroy');
 Route::get('noticias/editar/{id}', 'controladorNoticias@edit');
 Route::post('/noticias/{id}', 'controladorNoticias@update');
 
+//AREA AFETADA
+Route::get('/area', 'controladorArea@index');
+Route::get('/area/novo', 'controladorArea@create');
+Route::post('/area', 'controladorArea@store');
+
+
+//SUMMERNOTE
 Route::get('summernote',array('as'=>'summernote.get','uses'=>'FileController@getSummernote'));
 Route::post('summernote',array('as'=>'summernote.post','uses'=>'FileController@postSummernote'));

@@ -8,7 +8,7 @@
         @csrf
         <div class="form-group">
             <label for="pergunta">Pergunta</label>
-            <textarea class="form-control" name="pergunta" id="pergunta" rows="5"></textarea>
+            <textarea class="form-control" name="pergunta" id="texto" rows="5"></textarea>
         </div>
         <div class="form-group">
             <label for="resposta">Resposta</label>

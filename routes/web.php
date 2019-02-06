@@ -45,6 +45,13 @@ Route::get('/area', 'controladorArea@index');
 Route::get('/area/novo', 'controladorArea@create');
 Route::post('/area', 'controladorArea@store');
 
+//BANNER
+Route::get('/banners', 'controladorBanner@index');
+Route::get('/banners/novo', 'controladorBanner@create');
+Route::post('/banners', 'controladorBanner@store');
+Route::get('/banners/apagar/{id}', 'controladorBanner@destroy');
+Route::get('banners/editar/{id}', 'controladorBanner@edit');
+Route::post('/banners/{id}', 'controladorBanner@update');
 
 //SUMMERNOTE
 Route::get('summernote',array('as'=>'summernote.get','uses'=>'FileController@getSummernote'));

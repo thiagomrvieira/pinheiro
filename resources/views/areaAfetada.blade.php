@@ -22,8 +22,8 @@
                             <td>{{$area->titulo}}</td>
                             <td>{!!$area->texto!!}</td>
                             <td>
-                                <a href="noticias/editar/{{$area->id}}" class="btn btn-sm btn-primary">Editar</a>
-                                <a href="noticias/apagar/{{$area->id}}" class="btn btn-sm btn-danger">Apagar</a>
+                                <a href="area/editar/{{$area->id}}" class="btn btn-sm btn-primary">Editar</a>
+                                <a href="area/apagar/{{$area->id}}" class="btn btn-sm btn-danger">Apagar</a>
                             </td>
                         </tr>
                     @endforeach

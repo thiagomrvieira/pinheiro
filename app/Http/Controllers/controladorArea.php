@@ -37,6 +37,7 @@ class controladorArea extends Controller
      */
     public function store(Request $request)
     {
+        $area = new Area();
         $area->titulo = $request->input('titulo');
         $area->texto = $request->input('texto');
         $area->save();
@@ -62,7 +63,11 @@ class controladorArea extends Controller
      */
     public function edit($id)
     {
-        //
+        $area = Area::find($id);
+        if (isset($area)){
+            return view('editarArea', compact('area'));
+        }
+        return redirect('area');
     }
 
     /**
@@ -85,6 +90,10 @@ class controladorArea extends Controller
      */
     public function destroy($id)
     {
-        //
+        $area = Area::find($id);
+        if (isset($area)){
+            $area->delete();
+        }
+        return redirect('area');
     }
 }

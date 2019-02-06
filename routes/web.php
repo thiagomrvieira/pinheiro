@@ -44,6 +44,9 @@ Route::post('/noticias/{id}', 'controladorNoticias@update');
 Route::get('/area', 'controladorArea@index');
 Route::get('/area/novo', 'controladorArea@create');
 Route::post('/area', 'controladorArea@store');
+Route::get('/area/apagar/{id}', 'controladorArea@destroy');
+Route::get('area/editar/{id}', 'controladorArea@edit');
+Route::post('/area/{id}', 'controladorArea@update');
 
 //BANNER
 Route::get('/banners', 'controladorBanner@index');

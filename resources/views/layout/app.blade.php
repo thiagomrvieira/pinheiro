@@ -36,7 +36,7 @@
 
     <script>
     $(document).ready(function() {
-        $('#texto').summernote();
+        $('textarea').summernote();
     });
   </script>
 

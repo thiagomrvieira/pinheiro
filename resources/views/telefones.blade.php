@@ -5,7 +5,7 @@
     
     <div class="card border">
         <div class="card-body">
-            <h5 class= "card-title"> 3 telefones na Home</h5>
+            <h5 class= "card-title"> Inserir, editar e apagar 3 telefones na Home</h5>
             <table class="table table-ordered table-hover">
                 <thead>
                     <tr>

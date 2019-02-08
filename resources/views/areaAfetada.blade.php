@@ -1,11 +1,11 @@
 @extends('layout.app')
 
 @section('body')
-    <h1> Área </h1>
+    <h1> Áreas afetadas </h1>
     
     <div class="card border">
         <div class="card-body">
-            <h5 class= "card-title"> Área afetada</h5>
+            <h5 class= "card-title"> Inserir, editar e apagar texto</h5>
             <table class="table table-ordered table-hover">
                 <thead>
                     <tr>

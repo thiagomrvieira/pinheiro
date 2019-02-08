@@ -5,7 +5,7 @@
     
     <div class="card border">
         <div class="card-body">
-            <h5 class= "card-title"> Banner na página inicial</h5>
+            <h5 class= "card-title"> Inserir, editar e apagar banner único na página inicial</h5>
             <table class="table table-ordered table-hover">
                 <thead>
                     <tr>

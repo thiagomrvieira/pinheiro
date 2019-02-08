@@ -8,6 +8,11 @@ use App\Noticia;
 
 class controladorNoticias extends Controller
 {
+    // AUTENTICAÇÃO
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *

@@ -5,7 +5,7 @@
     
     <div class="card border">
         <div class="card-body">
-            <h5 class= "card-title"> Todas as Notícias</h5>
+            <h5 class= "card-title"> Inserir, editar e apagar notícias</h5>
             <table class="table table-ordered table-hover">
                 <thead>
                     <tr>

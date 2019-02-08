@@ -1,11 +1,11 @@
 @extends('layout.app')
 
 @section('body')
-    <h1> Perguntas</h1>
+    <h1> Perguntas e Respostas</h1>
 
     <div class="card border">
         <div class="card-body">
-            <h5 class= "card-title"> Perguntas e Respostas</h5>
+            <h5 class= "card-title"> Inserir, editar e apagar perguntas e respostas</h5>
             <table class="table table-ordered table-hover">
                 <thead>
                     <tr>

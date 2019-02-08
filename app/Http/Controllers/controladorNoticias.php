@@ -117,4 +117,23 @@ class controladorNoticias extends Controller
         }
         return redirect('noticias');
     }
+
+
+    public function cheio()
+    {
+        $noticias = Noticia::all();
+        return response()->json($noticias);
+    }
+
+    public function basico()
+    {
+        $noticias = Noticia::all();
+        $not = [];
+        foreach ($noticias as $n) {
+            array_push($not, $n->id, $n->titulo);
+            
+        }
+        return response()->json($not);
+    }
+
 }

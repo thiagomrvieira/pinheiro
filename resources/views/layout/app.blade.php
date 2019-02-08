@@ -14,8 +14,11 @@
 
 <body>
     <div class="container">
+
         <main role="main">
-            
+            @component('component_Nav');
+            @endcomponent
+
             @hasSection('body')
                 @yield('body')
 

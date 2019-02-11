@@ -1,25 +1,18 @@
+
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="/">Início <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/perguntas">Perguntas e Respostas</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/telefones">Telefones</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/noticias">Notícias</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/area">Áreas afetadas</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/banners">Banner</a>
-      </li>
-    </ul>
+  <a class="navbar-brand" href="/">Início</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-link" href="/perguntas">Perguntas e Respostas</a>
+      <a class="nav-link" href="/telefones">Telefones</a>
+      <a class="nav-link" href="/noticias">Notícias</a>
+      <a class="nav-link" href="/area">Áreas afetadas</a>
+      <a class="nav-link" href="/banners">Banner (topo)</a>
+      <a class="nav-link" href="/banners">Banner (doc)</a>
+    </div>
   </div>
 </nav>

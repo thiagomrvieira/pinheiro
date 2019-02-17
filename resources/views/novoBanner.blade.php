@@ -8,12 +8,12 @@
         @csrf
         <div class="form-group">
             <label for="imagem">Imagem</label>
-            <input type='file' id="imagem" name="imagem"/>
+            <input type='file' id="imagem" name="imagem"/ required>
         </div>
         
         <div class="form-group">
             <label for="descricao">Descrição</label>
-            <input type="text" class="form-control" name="descricao" id="descricao">
+            <input type="text" class="form-control" name="descricao" id="descricao" required>
         </div>
 
         

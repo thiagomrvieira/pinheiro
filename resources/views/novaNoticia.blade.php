@@ -8,27 +8,27 @@
         @csrf
         <div class="form-group">
             <label for="imagem">Imagem</label>
-            <input type='file' id="imagemCapa" name="imagemCapa"/>
+            <input type='file' id="imagemCapa" name="imagemCapa"/ required>
         </div>
         <div class="form-group">
             <label for="titulo">Título</label>
-            <input type="text" class="form-control" name="titulo" id="titulo">
+            <input type="text" class="form-control" name="titulo" id="titulo" required>
         </div>
         <div class="form-group">
             <label for="chapeu">Chapéu</label>
-            <input type="text" class="form-control" name="chapeu" id="chapeu">
+            <input type="text" class="form-control" name="chapeu" id="chapeu" required>
         </div>
         <div class="form-group">
             <label for="intro">Introdução</label>
-            <input type="text" class="form-control" name="intro" id="intro">
+            <input type="text" class="form-control" name="intro" id="intro" required>
         </div>
         <div class="form-group">
             <label for="reporter">Repórter</label>
-            <input type="text" class="form-control" name="reporter" id="reporter">
+            <input type="text" class="form-control" name="reporter" id="reporter" required>
         </div>
         <div class="form-group">
             <label for="texto">Texto</label>
-            <textarea class="form-control" id="texto" name="texto" rows="7"></textarea>
+            <textarea class="form-control" id="texto" name="texto" rows="7" required></textarea>
              
         </div>
         

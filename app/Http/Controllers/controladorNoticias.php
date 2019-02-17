@@ -68,7 +68,10 @@ class controladorNoticias extends Controller
      */
     public function show($id)
     {
-        //
+        $noticia = Noticia::find($id);
+        if (isset($noticia)){
+            return view('noticia', compact('noticia'));
+        }
     }
 
     /**
@@ -124,15 +127,18 @@ class controladorNoticias extends Controller
     }
 
 
-    public function todas()
+    public function noticias()
     {
         $noticias = Noticia::all();
         return response()->json($noticias);
     }
 
-    public function basico()
+    public function noticia($id)
     {
-        echo "teste";
+        $noticia = Noticia::find($id);
+        if (isset($noticia)){
+            return response()->json($noticia);
+        }
     }
 
 }

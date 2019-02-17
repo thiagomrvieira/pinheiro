@@ -9,9 +9,9 @@ use App\Noticia;
 class controladorNoticias extends Controller
 {
     // AUTENTICAÇÃO
-    public function __construct(){
+    /*public function __construct(){
         $this->middleware('auth');
-    }
+    }*/
 
     /**
      * Display a listing of the resource.
@@ -124,7 +124,7 @@ class controladorNoticias extends Controller
     }
 
 
-    public function cheio()
+    public function todas()
     {
         $noticias = Noticia::all();
         return response()->json($noticias);
@@ -132,13 +132,7 @@ class controladorNoticias extends Controller
 
     public function basico()
     {
-        $noticias = Noticia::all();
-        $not = [];
-        foreach ($noticias as $n) {
-            array_push($not, $n->id, $n->titulo);
-            
-        }
-        return response()->json($not);
+        echo "teste";
     }
 
 }

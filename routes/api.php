@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('v1/noticias/', 'controladorNoticias@noticias');
-
+Route::get('v1/noticias/capa', 'controladorNoticias@capa');
 Route::get('v1/noticias/{id}', 'controladorNoticias@noticia');
 
 Route::get('v1/areas/', 'controladorArea@areas');

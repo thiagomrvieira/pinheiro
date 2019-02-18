@@ -136,7 +136,7 @@ class controladorNoticias extends Controller
         return redirect('noticias');
     }
 
-
+    // API
     public function noticias()
     {
         $noticias = Noticia::all();

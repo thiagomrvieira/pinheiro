@@ -4,7 +4,7 @@
     <h1> Nova área afetada</h1>
 
 
-    <form action="/area" method="POST">
+    <form action="/areas" method="POST">
         @csrf
         <div class="form-group">
             <label for="titulo">Título</label>
@@ -17,7 +17,7 @@
 
 
         <button type="submit" class="btn btn-primary">Enviar</button>
-        <input type="button" name="Cancel" class="btn btn-danger" value="Cancel" onclick="window.location = '/area' " />
+        <input type="button" name="Cancel" class="btn btn-danger" value="Cancel" onclick="window.location = '/areas' " />
     </form>
 
 

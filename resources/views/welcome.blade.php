@@ -88,7 +88,7 @@
                     <a href="/perguntas">Perguntas e Respostas</a>
                     <a href="/telefones">Telefones</a>
                     <a href="/noticias">Notícias</a>
-                    <a href="/area">Áreas afetadas</a>
+                    <a href="/areas">Áreas afetadas</a>
                     <a href="/banners">Banner</a>
                     
                 </div>

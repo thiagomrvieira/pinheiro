@@ -22,8 +22,8 @@
                             <td>{{$area->titulo}}</td>
                             <td>{!!$area->texto!!}</td>
                             <td>
-                                <a href="area/editar/{{$area->id}}" class="btn btn-sm btn-primary">Editar</a>
-                                <a href="area/apagar/{{$area->id}}" class="btn btn-sm btn-danger">Apagar</a>
+                                <a href="areas/editar/{{$area->id}}" class="btn btn-sm btn-primary">Editar</a>
+                                <a href="areas/apagar/{{$area->id}}" class="btn btn-sm btn-danger">Apagar</a>
                             </td>
                         </tr>
                     @endforeach
@@ -34,7 +34,7 @@
     </div>
 
     <div class="card-footer">
-        <a href="/area/novo" class="btn btn-sm btn-primary" role="button">Novo</a>
+        <a href="/areas/novo" class="btn btn-sm btn-primary" role="button">Novo</a>
     
     </div>
     

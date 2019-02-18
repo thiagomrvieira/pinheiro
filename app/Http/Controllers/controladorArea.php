@@ -9,9 +9,9 @@ use App\Area;
 class controladorArea extends Controller
 {
     // AUTENTICAÇÃO
-    public function __construct(){
+    /*public function __construct(){
         $this->middleware('auth');
-    }
+    }*/
 
     /**
      * Display a listing of the resource.
@@ -46,7 +46,7 @@ class controladorArea extends Controller
         $area->titulo = $request->input('titulo');
         $area->texto = $request->input('texto');
         $area->save();
-        return redirect('/area');
+        return redirect('/areas');
     }
 
     /**
@@ -72,7 +72,7 @@ class controladorArea extends Controller
         if (isset($area)){
             return view('editarArea', compact('area'));
         }
-        return redirect('area');
+        return redirect('areas');
     }
 
     /**
@@ -92,7 +92,7 @@ class controladorArea extends Controller
            
         }
         
-        return redirect('area');
+        return redirect('areas');
 
 
     }
@@ -109,6 +109,16 @@ class controladorArea extends Controller
         if (isset($area)){
             $area->delete();
         }
-        return redirect('area');
+        return redirect('areas');
     }
+
+
+
+    //API
+    public function areas()
+    {
+        $areas = Area::all();
+        return response()->json($areas);
+    }
+
 }

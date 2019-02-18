@@ -42,12 +42,12 @@ Route::get('noticias/editar/{id}', 'controladorNoticias@edit')->middleware('auth
 Route::post('/noticias/{id}', 'controladorNoticias@update')->middleware('auth');
 
 //AREA AFETADA
-Route::get('/area', 'controladorArea@index');
-Route::get('/area/novo', 'controladorArea@create');
-Route::post('/area', 'controladorArea@store');
-Route::get('/area/apagar/{id}', 'controladorArea@destroy');
-Route::get('area/editar/{id}', 'controladorArea@edit');
-Route::post('/area/{id}', 'controladorArea@update');
+Route::get('/areas', 'controladorArea@index')->middleware('auth');
+Route::get('/areas/novo', 'controladorArea@create')->middleware('auth');
+Route::post('/areas', 'controladorArea@store')->middleware('auth');
+Route::get('/areas/apagar/{id}', 'controladorArea@destroy')->middleware('auth');
+Route::get('areas/editar/{id}', 'controladorArea@edit')->middleware('auth');
+Route::post('/areas/{id}', 'controladorArea@update')->middleware('auth');
 
 //BANNER
 Route::get('/banners', 'controladorBanner@index');

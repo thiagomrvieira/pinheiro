@@ -10,7 +10,7 @@
       <a class="nav-link" href="/perguntas">Perguntas e Respostas</a>
       <a class="nav-link" href="/telefones">Telefones</a>
       <a class="nav-link" href="/noticias">Notícias</a>
-      <a class="nav-link" href="/area">Áreas afetadas</a>
+      <a class="nav-link" href="/areas">Áreas afetadas</a>
       <a class="nav-link" href="/banners">Banner (topo)</a>
       <a class="nav-link" href="/banners">Banner (doc)</a>
     </div>

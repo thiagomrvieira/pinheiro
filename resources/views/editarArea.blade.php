@@ -4,7 +4,7 @@
     <h1> Editar Área afetada</h1>
 
 
-    <form action="/area" method="POST">
+    <form action="/area/{{$area->id}}" method="POST">
         @csrf
         <div class="form-group">
             <label for="titulo">Título</label>

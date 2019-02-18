@@ -84,7 +84,17 @@ class controladorArea extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $area = Area::find($id);
+        if (isset($area)) {
+            $area->titulo = $request->input('titulo');
+            $area->texto = $request->input('texto');
+            $area->save();
+           
+        }
+        
+        return redirect('area');
+
+
     }
 
     /**

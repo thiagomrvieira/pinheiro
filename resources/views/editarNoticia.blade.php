@@ -8,7 +8,7 @@
         @csrf
         <div class="form-group">
             <label for="imagem">Imagem</label>
-            <input type='file' id="imagemCapa" name="imagemCapa" value="{{$noticia->imagemCapa}}"/>
+            <input type='file' id="imagemCapa" name="imagemCapa" required>
         </div>
         <div class="form-group">
             <label for="titulo">Título</label>

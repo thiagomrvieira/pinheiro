@@ -12,7 +12,7 @@
       <a class="nav-link" href="/noticias">Notícias</a>
       <a class="nav-link" href="/areas">Áreas afetadas</a>
       <a class="nav-link" href="/banners">Banner (topo)</a>
-      <a class="nav-link" href="/banners">Banner (doc)</a>
+      <a class="nav-link" href="/download">Banner (doc)</a>
     </div>
   </div>
 </nav>

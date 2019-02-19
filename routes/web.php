@@ -49,7 +49,15 @@ Route::get('/areas/apagar/{id}', 'controladorArea@destroy')->middleware('auth');
 Route::get('areas/editar/{id}', 'controladorArea@edit')->middleware('auth');
 Route::post('/areas/{id}', 'controladorArea@update')->middleware('auth');
 
-//BANNER
+//BANNER DOWNLOAD
+Route::get('/download', 'controladorDownload@index');
+Route::get('/download/novo', 'controladorDownload@create');
+Route::post('/download', 'controladorDownload@store');
+Route::get('/download/apagar/{id}', 'controladorDownload@destroy');
+Route::get('download/editar/{id}', 'controladorDownload@edit');
+Route::post('/download/{id}', 'controladorDownload@update');
+
+//BANNER TOPO
 Route::get('/banners', 'controladorBanner@index');
 Route::get('/banners/novo', 'controladorBanner@create');
 Route::post('/banners', 'controladorBanner@store');

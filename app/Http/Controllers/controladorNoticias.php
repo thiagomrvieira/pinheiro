@@ -48,6 +48,7 @@ class controladorNoticias extends Controller
         $noticia->intro = $request->input('intro');
         $noticia->reporter = $request->input('reporter');
         $noticia->texto = $request->input('texto');
+
         //imagem capa
         $imagemCapa = $request->file('imagemCapa');
         $nome = $input['imagename'] = time() . "." . $imagemCapa->getClientOriginalExtension();
@@ -56,6 +57,7 @@ class controladorNoticias extends Controller
         
         $noticia->imagemCapa = $caminho . DIRECTORY_SEPARATOR . $nome;
         $noticia->save();
+
         return redirect('/noticias');
     }
 

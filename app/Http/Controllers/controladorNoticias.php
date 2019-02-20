@@ -55,7 +55,8 @@ class controladorNoticias extends Controller
         $caminho = $destinationPath = public_path('imgNoticias');
         $imagemCapa->move($destinationPath, $input['imagename']);
         
-        $noticia->imagemCapa = $caminho . DIRECTORY_SEPARATOR . $nome;
+        //$noticia->imagemCapa = $caminho . DIRECTORY_SEPARATOR . $nome;
+        $noticia->imagemCapa = 'imgNoticias' . DIRECTORY_SEPARATOR . $nome;
         $noticia->save();
 
         return redirect('/noticias');
@@ -115,7 +116,8 @@ class controladorNoticias extends Controller
             $caminho = $destinationPath = public_path('imgNoticias');
             $imagemCapa->move($destinationPath, $input['imagename']);
             
-            $noticia->imagemCapa = $caminho . DIRECTORY_SEPARATOR . $nome;
+            //$noticia->imagemCapa = $caminho . DIRECTORY_SEPARATOR . $nome;
+            $noticia->imagemCapa = 'imgNoticias' . DIRECTORY_SEPARATOR . $nome;
             $noticia->save();
            
         }

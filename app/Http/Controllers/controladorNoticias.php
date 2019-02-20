@@ -56,7 +56,7 @@ class controladorNoticias extends Controller
         $imagemCapa->move($destinationPath, $input['imagename']);
         
         //$noticia->imagemCapa = $caminho . DIRECTORY_SEPARATOR . $nome;
-        $noticia->imagemCapa = 'imgNoticias' . DIRECTORY_SEPARATOR . $nome;
+        $noticia->imagemCapa = 'http://testephp.itec.al.gov.br/public/imgNoticias' . DIRECTORY_SEPARATOR . $nome;
         $noticia->save();
 
         return redirect('/noticias');

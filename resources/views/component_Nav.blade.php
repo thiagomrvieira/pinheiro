@@ -11,8 +11,9 @@
       <a class="nav-link" href="/telefones">Telefones</a>
       <a class="nav-link" href="/noticias">Notícias</a>
       <a class="nav-link" href="/areas">Áreas afetadas</a>
-      <a class="nav-link" href="/banners">Banner (topo)</a>
-      <a class="nav-link" href="/download">Banner (doc)</a>
+      <a class="nav-link" href="/banners">Banner</a>
+      <a class="nav-link" href="/download">Download</a>
+      <a class="nav-link" href="/mapa">Mapa</a>
     </div>
   </div>
 </nav>

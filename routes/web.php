@@ -65,6 +65,15 @@ Route::get('/banners/apagar/{id}', 'controladorBanner@destroy');
 Route::get('banners/editar/{id}', 'controladorBanner@edit');
 Route::post('/banners/{id}', 'controladorBanner@update');
 
+//MAPA
+Route::get('/mapa', 'controladorMapa@index');
+Route::get('/mapa/novo', 'controladorMapa@create');
+Route::post('/mapa', 'controladorMapa@store');
+Route::get('/mapa/apagar/{id}', 'controladorMapa@destroy');
+Route::get('mapa/editar/{id}', 'controladorMapa@edit');
+Route::post('/mapa/{id}', 'controladorMapa@update');
+
+
 //SUMMERNOTE
 Route::get('summernote',array('as'=>'summernote.get','uses'=>'FileController@getSummernote'));
 Route::post('summernote',array('as'=>'summernote.post','uses'=>'FileController@postSummernote'));

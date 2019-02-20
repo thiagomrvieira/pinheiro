@@ -90,6 +90,8 @@
                     <a href="/noticias">Notícias</a>
                     <a href="/areas">Áreas afetadas</a>
                     <a href="/banners">Banner</a>
+                    <a href="/download">Download</a>
+                    <a href="/mapa">Mapa</a>
                     
                 </div>
             </div>

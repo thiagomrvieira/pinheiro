@@ -145,13 +145,11 @@ class controladorNoticias extends Controller
         return response()->json($noticias);
     }
 
-    /*public function capa()
+    public function capa()
     {
         $noticias = Noticia::all();
-        $capa = new Noticia();
-        $capa->titulo = $noticias->titulo;
-        return response()->json($capa);
-    }*/
+        return response()->json($noticias);
+    }
 
     public function noticia($id)
     {

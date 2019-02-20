@@ -30,7 +30,7 @@
         </div>
         
         <button type="submit" class="btn btn-primary">Enviar</button>
-        <input type="button" name="Cancel" class="btn btn-danger" value="Cancel" onclick="window.location = '/banners' " />
+        <input type="button" name="Cancel" class="btn btn-danger" value="Cancel" onclick="window.location = '/mapa' " />
     </form>
 
 

@@ -14,6 +14,7 @@
       <a class="nav-link" href="/banners">Banner</a>
       <a class="nav-link" href="/download">Download</a>
       <a class="nav-link" href="/mapa">Mapa</a>
+      <a class="nav-link" href="/info">Informações</a>
     </div>
   </div>
 </nav>

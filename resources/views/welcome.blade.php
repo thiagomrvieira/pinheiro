@@ -92,6 +92,9 @@
                     <a href="/banners">Banner</a>
                     <a href="/download">Download</a>
                     <a href="/mapa">Mapa</a>
+                    <a href="/info">Informações</a>
+                    
+                    
                     
                 </div>
             </div>

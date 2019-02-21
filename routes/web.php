@@ -58,36 +58,36 @@ Route::get('download/editar/{id}', 'controladorDownload@edit')->middleware('auth
 Route::post('/download/{id}', 'controladorDownload@update')->middleware('auth');
 
 //BANNER TOPO
-Route::get('/banners', 'controladorBanner@index');
-Route::get('/banners/novo', 'controladorBanner@create');
-Route::post('/banners', 'controladorBanner@store');
-Route::get('/banners/apagar/{id}', 'controladorBanner@destroy');
-Route::get('banners/editar/{id}', 'controladorBanner@edit');
-Route::post('/banners/{id}', 'controladorBanner@update');
+Route::get('/banners', 'controladorBanner@index')->middleware('auth');
+Route::get('/banners/novo', 'controladorBanner@create')->middleware('auth');
+Route::post('/banners', 'controladorBanner@store')->middleware('auth');
+Route::get('/banners/apagar/{id}', 'controladorBanner@destroy')->middleware('auth');
+Route::get('banners/editar/{id}', 'controladorBanner@edit')->middleware('auth');
+Route::post('/banners/{id}', 'controladorBanner@update')->middleware('auth');
 
 //MAPA
-Route::get('/mapa', 'controladorMapa@index');
-Route::get('/mapa/novo', 'controladorMapa@create');
-Route::post('/mapa', 'controladorMapa@store');
-Route::get('/mapa/apagar/{id}', 'controladorMapa@destroy');
-Route::get('mapa/editar/{id}', 'controladorMapa@edit');
-Route::post('/mapa/{id}', 'controladorMapa@update');
+Route::get('/mapa', 'controladorMapa@index')->middleware('auth');
+Route::get('/mapa/novo', 'controladorMapa@create')->middleware('auth');
+Route::post('/mapa', 'controladorMapa@store')->middleware('auth');
+Route::get('/mapa/apagar/{id}', 'controladorMapa@destroy')->middleware('auth');
+Route::get('mapa/editar/{id}', 'controladorMapa@edit')->middleware('auth');
+Route::post('/mapa/{id}', 'controladorMapa@update')->middleware('auth');
 
 //INFORMAÇÕES
-Route::get('/info', 'controladorInfo@index');
-Route::get('/info/novo', 'controladorInfo@create');
-Route::post('/info', 'controladorInfo@store');
-Route::get('/info/apagar/{id}', 'controladorInfo@destroy');
-Route::get('info/editar/{id}', 'controladorInfo@edit');
-Route::post('/info/{id}', 'controladorInfo@update');
+Route::get('/info', 'controladorInfo@index')->middleware('auth');
+Route::get('/info/novo', 'controladorInfo@create')->middleware('auth');
+Route::post('/info', 'controladorInfo@store')->middleware('auth');
+Route::get('/info/apagar/{id}', 'controladorInfo@destroy')->middleware('auth');
+Route::get('info/editar/{id}', 'controladorInfo@edit')->middleware('auth');
+Route::post('/info/{id}', 'controladorInfo@update')->middleware('auth');
 
 //ÓRGAOS
-Route::get('/orgaos', 'controladorOrgaos@index');
-Route::get('/orgaos/novo', 'controladorOrgaos@create');
-Route::post('/orgaos', 'controladorOrgaos@store');
-Route::get('/orgaos/apagar/{id}', 'controladorOrgaos@destroy');
-Route::get('orgaos/editar/{id}', 'controladorOrgaos@edit');
-Route::post('/orgaos/{id}', 'controladorOrgaos@update');
+Route::get('/orgaos', 'controladorOrgaos@index')->middleware('auth');
+Route::get('/orgaos/novo', 'controladorOrgaos@create')->middleware('auth');
+Route::post('/orgaos', 'controladorOrgaos@store')->middleware('auth');
+Route::get('/orgaos/apagar/{id}', 'controladorOrgaos@destroy')->middleware('auth');
+Route::get('orgaos/editar/{id}', 'controladorOrgaos@edit')->middleware('auth');
+Route::post('/orgaos/{id}', 'controladorOrgaos@update')->middleware('auth');
 
 
 //SUMMERNOTE

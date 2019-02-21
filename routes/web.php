@@ -50,12 +50,12 @@ Route::get('areas/editar/{id}', 'controladorArea@edit')->middleware('auth');
 Route::post('/areas/{id}', 'controladorArea@update')->middleware('auth');
 
 //BANNER DOWNLOAD
-Route::get('/download', 'controladorDownload@index');
-Route::get('/download/novo', 'controladorDownload@create');
-Route::post('/download', 'controladorDownload@store');
-Route::get('/download/apagar/{id}', 'controladorDownload@destroy');
-Route::get('download/editar/{id}', 'controladorDownload@edit');
-Route::post('/download/{id}', 'controladorDownload@update');
+Route::get('/download', 'controladorDownload@index')->middleware('auth');
+Route::get('/download/novo', 'controladorDownload@create')->middleware('auth');
+Route::post('/download', 'controladorDownload@store')->middleware('auth');
+Route::get('/download/apagar/{id}', 'controladorDownload@destroy')->middleware('auth');
+Route::get('download/editar/{id}', 'controladorDownload@edit')->middleware('auth');
+Route::post('/download/{id}', 'controladorDownload@update')->middleware('auth');
 
 //BANNER TOPO
 Route::get('/banners', 'controladorBanner@index');

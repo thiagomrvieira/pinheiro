@@ -8,10 +8,7 @@ use App\Banner;
 
 class controladorBanner extends Controller
 {
-    // AUTENTICAÇÃO
-    public function __construct(){
-        $this->middleware('auth');
-    }
+
 
     /**
      * Display a listing of the resource.
@@ -115,5 +112,12 @@ class controladorBanner extends Controller
             $banner->delete();
         }
         return redirect('banners');
+    }
+
+     // API
+    public function banners()
+    {
+        $banners = Banner::all();
+        return response()->json($banners);
     }
 }

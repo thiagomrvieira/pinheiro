@@ -25,6 +25,7 @@ Route::get('v1/perguntas/', 'controladorPerguntas@perguntas')->middleware('cors'
 
 Route::get('v1/telefones/', 'controladorTelefones@telefones')->middleware('cors');
 
-
 Route::get('v1/areas/', 'controladorArea@areas');
+
+Route::get('v1/banners/', 'controladorBanner@banners');
 

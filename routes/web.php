@@ -25,12 +25,12 @@ Route::get('/perguntas/editar/{id}', 'controladorPerguntas@edit')->middleware('a
 Route::post('/perguntas/{id}', 'controladorPerguntas@update')->middleware('auth');
 
 //TELEFONES
-Route::get('/telefones', 'controladorTelefones@index');
-Route::get('/telefones/novo', 'controladorTelefones@create');
-Route::post('/telefones', 'controladorTelefones@store');
-Route::get('/telefones/apagar/{id}', 'controladorTelefones@destroy');
-Route::get('/telefones/editar/{id}', 'controladorTelefones@edit');
-Route::post('/telefones/{id}', 'controladorTelefones@update');
+Route::get('/telefones', 'controladorTelefones@index')->middleware('auth');
+Route::get('/telefones/novo', 'controladorTelefones@create')->middleware('auth');
+Route::post('/telefones', 'controladorTelefones@store')->middleware('auth');
+Route::get('/telefones/apagar/{id}', 'controladorTelefones@destroy')->middleware('auth');
+Route::get('/telefones/editar/{id}', 'controladorTelefones@edit')->middleware('auth');
+Route::post('/telefones/{id}', 'controladorTelefones@update')->middleware('auth');
 
 //NOTÍCIAS
 Route::get('/noticias', 'controladorNoticias@index')->middleware('auth');

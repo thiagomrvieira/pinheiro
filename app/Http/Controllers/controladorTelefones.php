@@ -9,10 +9,7 @@ use App\telefone;
 
 class controladorTelefones extends Controller
 {
-    // AUTENTICAÇÃO
-    public function __construct(){
-        $this->middleware('auth');
-    }
+    
 
 
     /**
@@ -113,4 +110,13 @@ class controladorTelefones extends Controller
         }
         return redirect('telefones');
     }
+
+     // API
+    public function telefones()
+    {
+        $telefones = telefone::all();
+        return response()->json($telefones);
+    }
+
+
 }

@@ -9,10 +9,10 @@ use App\perguntasFaq;
 class controladorPerguntas extends Controller
 {
     
-    // AUTENTICAÇÃO
+    /* AUTENTICAÇÃO
     public function __construct(){
         $this->middleware('auth');
-    }
+    }*/
     
     /**
      * Display a listing of the resource.
@@ -110,4 +110,12 @@ class controladorPerguntas extends Controller
         }
         return redirect('perguntas');
     }
+
+    // API
+    public function perguntas()
+    {
+        $perguntas = perguntasFaq::all();
+        return response()->json($perguntas);
+    }
+    
 }

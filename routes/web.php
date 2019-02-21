@@ -17,12 +17,12 @@ Route::get('/', function () {
 });
 
 //PERGUNTAS
-Route::get('/perguntas', 'controladorPerguntas@index');
-Route::get('/perguntas/novo', 'controladorPerguntas@create');
-Route::post('/perguntas', 'controladorPerguntas@store');
-Route::get('/perguntas/apagar/{id}', 'controladorPerguntas@destroy');
-Route::get('/perguntas/editar/{id}', 'controladorPerguntas@edit');
-Route::post('/perguntas/{id}', 'controladorPerguntas@update');
+Route::get('/perguntas', 'controladorPerguntas@index')->middleware('auth');
+Route::get('/perguntas/novo', 'controladorPerguntas@create')->middleware('auth');
+Route::post('/perguntas', 'controladorPerguntas@store')->middleware('auth');
+Route::get('/perguntas/apagar/{id}', 'controladorPerguntas@destroy')->middleware('auth');
+Route::get('/perguntas/editar/{id}', 'controladorPerguntas@edit')->middleware('auth');
+Route::post('/perguntas/{id}', 'controladorPerguntas@update')->middleware('auth');
 
 //TELEFONES
 Route::get('/telefones', 'controladorTelefones@index');

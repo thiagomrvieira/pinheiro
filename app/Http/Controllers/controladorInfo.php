@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Info;
+use App\Orgao;
 
 class controladorInfo extends Controller
 {
@@ -15,7 +16,8 @@ class controladorInfo extends Controller
      */
     public function index()
     {
-        
+        $informacoes = Info::all();
+        return view('informacoes', compact('informacoes'));
     }
 
     /**
@@ -25,8 +27,8 @@ class controladorInfo extends Controller
      */
     public function create()
     {
-        $informacoes = Info::all();
-        return view('info', compact('informacoes'));
+        $orgaos = Orgao::all();
+        return view('novaInfo', compact('orgaos'));
     }
 
     /**
@@ -37,7 +39,12 @@ class controladorInfo extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $informacao = new Info();
+        $informacao->titulo = $request->input('titulo');
+        $informacao->texto = $request->input('texto');
+        $informacao->orgao_id = $request->input('orgao');
+        $informacao->save();
+        return redirect('info');
     }
 
     /**

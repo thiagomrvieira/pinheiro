@@ -89,6 +89,17 @@ class controladorInfo extends Controller
      */
     public function destroy($id)
     {
-        //
+        $informacoes = Info::find($id);
+        if (isset($informacoes)) {
+            $informacoes->delete();
+        }
+        return redirect('info');
     }
+
+     // API
+     public function informacoes()
+     {
+         $informacoes = Info::all();
+         return response()->json($informacoes);
+     }
 }

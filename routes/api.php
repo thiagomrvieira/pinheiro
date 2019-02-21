@@ -29,3 +29,5 @@ Route::get('v1/areas/', 'controladorArea@areas');
 
 Route::get('v1/banners/', 'controladorBanner@banners');
 
+Route::get('v1/informacoes/', 'controladorInfo@informacoes');
+

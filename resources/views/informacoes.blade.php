@@ -24,7 +24,7 @@
                             <td>{!!$info->texto!!}</td>
                             <td>{{$info->orgao_id}}</td>
                             <td>
-                                <a href="mapa/apagar/{{$info->id}}" class="btn btn-sm btn-danger">Apagar</a>
+                                <a href="info/apagar/{{$info->id}}" class="btn btn-sm btn-danger">Apagar</a>
                             </td>
                         </tr>
                     @endforeach

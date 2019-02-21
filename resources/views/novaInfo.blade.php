@@ -18,7 +18,7 @@
             <label for="orgao">Competência</label>
             <select class="form-control" id="orgao" name="orgao">
                 @foreach ($orgaos as $orgao)
-                    <option value="{{$orgao->nome}}">{{$orgao->nome}}</option>
+                    <option value="{{$orgao->id}}">{{$orgao->nome}}</option>
                 @endforeach
             </select>
         </div>

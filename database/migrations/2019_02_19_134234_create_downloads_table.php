@@ -17,6 +17,7 @@ class CreateDownloadsTable extends Migration
             $table->increments('id');
             $table->string('imagem');
             $table->string('descricao');
+            $table->string('arquivo');
             $table->timestamps();
         });
     }

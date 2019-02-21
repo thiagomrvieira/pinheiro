@@ -22,7 +22,7 @@
                             <td>{{$info->id}}</td>
                             <td>{{$info->titulo}}</td>
                             <td>{!!$info->texto!!}</td>
-                            <td>{{$info->orgao}}</td>
+                            <td>{{$info->orgao_id}}</td>
                             <td>
                                 <a href="mapa/apagar/{{$info->id}}" class="btn btn-sm btn-danger">Apagar</a>
                             </td>
@@ -36,7 +36,7 @@
 
     <div class="card-footer">
         <a href="/info/novo" class="btn btn-sm btn-primary" role="button">Nova informação</a>
-        <a href="/orgao/novo" class="btn btn-sm btn-primary" role="button">Novo órgao</a>
+        <a href="/orgaos/novo" class="btn btn-sm btn-primary" role="button">Novo órgao</a>
     </div>
     
 

@@ -12,6 +12,7 @@
                         <th>ID</th>
                         <th>Descrição</th>
                         <th>Imagem</th>
+                        <th>Arquivo</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -21,6 +22,7 @@
                             <td>{{$d->id}}</td>
                             <td>{{$d->descricao}}</td>
                             <td>{{$d->imagem}}</td>
+                            <td>{{$d->arquivo}}</td>
                             <td>
                                 <a href="download/apagar/{{$d->id}}" class="btn btn-sm btn-danger">Apagar</a>
                             </td>

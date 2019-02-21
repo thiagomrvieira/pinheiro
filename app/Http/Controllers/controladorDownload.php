@@ -41,13 +41,20 @@ class controladorDownload extends Controller
         $download = new Download();
         $download->descricao = $request->input('descricao');
         
-        
+        //banner
         $imagem = $request->file('imagem');
         $nome = $input['imagename'] = time() . "." . $imagem->getClientOriginalExtension();
         $caminho = $destinationPath = public_path('imgBanners');
         $imagem->move($destinationPath, $input['imagename']);
-        
         $download->imagem = $caminho . DIRECTORY_SEPARATOR . $nome;
+        
+        //arquivo
+        $arquivo = $request->file('arquivo');
+        $nomeArquivo = $input['imagename'] = time() . "." . $arquivo->getClientOriginalExtension();
+        $caminho = $destinationPath = public_path('imgBanners');
+        $arquivo->move($destinationPath, $input['imagename']);
+        $download->arquivo = $caminho . DIRECTORY_SEPARATOR . $nome;
+
         $download->save();
         return redirect('/download');
     }

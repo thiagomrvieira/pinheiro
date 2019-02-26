@@ -60,7 +60,7 @@
                         <tr>
                             <td>{{$not->id}}</td>
                             <td class="texto">{{$not->titulo}}</td>
-                            <td><img src={{$not->imagemCapa}} alt="capa"></td>
+                            <td><img src={{$not->imagemCapa}} alt="capa" height="80" width="80"></td>
                             <td >{{$not->chapeu}}</td>
                             <td class="texto" >{{$not->intro}}</td>
                             <td >{{$not->reporter}}</td>

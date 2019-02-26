@@ -50,7 +50,7 @@ class controladorBanner extends Controller
         $imagem->move($destinationPath, $input['imagename']);
         
         //$banner->imagem = $caminho . DIRECTORY_SEPARATOR . $nome;
-        $banner->imagem = 'http://testephp.itec.al.gov.br/imgBanners' . DIRECTORY_SEPARATOR . $nome;
+        $banner->imagem = 'http://api.itec.al.gov.br/imgBanners' . DIRECTORY_SEPARATOR . $nome;
         $banner->save();
         return redirect('/banners');
     }

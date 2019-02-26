@@ -59,12 +59,12 @@
                     @foreach ($noticias as $not)
                         <tr>
                             <td>{{$not->id}}</td>
-                            <td class="texto">{{$not->titulo}}</td>
+                            <td> <div class="texto">{{$not->titulo}}</div></td>
                             <td><img src={{$not->imagemCapa}} alt="capa" height="80" width="80"></td>
                             <td >{{$not->chapeu}}</td>
-                            <td class="texto" >{{$not->intro}}</td>
+                            <td> <div class="texto" >{{$not->intro}}</div></td>
                             <td >{{$not->reporter}}</td>
-                            <td class="texto">{!!$not->texto!!}</td>
+                            <td> <div class="texto" >{!!$not->texto!!}</div></td>
                             <td>
                                 <a href="noticias/editar/{{$not->id}}" class="btn btn-sm btn-primary">Editar</a>
                                 <a href="noticias/apagar/{{$not->id}}" class="btn btn-sm btn-danger">Apagar</a>

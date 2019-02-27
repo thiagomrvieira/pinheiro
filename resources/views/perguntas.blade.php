@@ -1,11 +1,11 @@
 @extends('layout.app')
 
 @section('body')
-    <h1> Perguntas e Respostas</h1>
+    <h1> Dúvidas Frequentes</h1>
 
     <div class="card border">
         <div class="card-body">
-            <h5 class= "card-title"> Inserir, editar e apagar perguntas e respostas</h5>
+            <h5 class= "card-title"> Inserir, editar e apagar dúvidas frequentes</h5>
             <table class="table table-ordered table-hover">
                 <thead>
                     <tr>
@@ -22,8 +22,8 @@
                             <td>{!!$per->pergunta!!}</td>
                             <td>{!!$per->resposta!!}</td>
                             <td>
-                                <a href="perguntas/editar/{{$per->id}}" class="btn btn-sm btn-primary">Editar</a>
-                                <a href="perguntas/apagar/{{$per->id}}" class="btn btn-sm btn-danger">Apagar</a>
+                                <a href="duvidas-frequentes/editar/{{$per->id}}" class="btn btn-sm btn-primary">Editar</a>
+                                <a href="duvidas-frequentes/apagar/{{$per->id}}" class="btn btn-sm btn-danger">Apagar</a>
                             </td>
                         </tr>
                     @endforeach
@@ -33,7 +33,7 @@
     
     </div>
     <div class="card-footer">
-        <a href="/perguntas/novo" class="btn btn-sm btn-primary" role="button">Nova pergunta</a>
+        <a href="/duvidas-frequentes/novo" class="btn btn-sm btn-primary" role="button">Nova pergunta</a>
     
     </div>
 

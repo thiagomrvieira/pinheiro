@@ -44,7 +44,7 @@ class controladorInfo extends Controller
         $informacao->texto = $request->input('texto');
         $informacao->orgao_id = $request->input('orgao');
         $informacao->save();
-        return redirect('info');
+        return redirect('atuacao-integrada');
     }
 
     /**
@@ -93,7 +93,7 @@ class controladorInfo extends Controller
         if (isset($informacoes)) {
             $informacoes->delete();
         }
-        return redirect('info');
+        return redirect('atuacao-integrada');
     }
 
      // API

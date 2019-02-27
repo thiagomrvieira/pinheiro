@@ -4,7 +4,7 @@
     <h1> Nova informação </h1>
 
 
-    <form action="/info" method="POST" enctype="multipart/form-data">
+    <form action="/atuacao-integrada" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="titulo">Título</label>
@@ -25,7 +25,7 @@
 
         
         <button type="submit" class="btn btn-primary">Enviar</button>
-        <input type="button" name="Cancel" class="btn btn-danger" value="Cancel" onclick="window.location = '/info' " />
+        <input type="button" name="Cancel" class="btn btn-danger" value="Cancel" onclick="window.location = '/atuacao-integrada' " />
     </form>
 
 

@@ -4,7 +4,7 @@
     <h1> Editar pergunta</h1>
 
 
-    <form action="/perguntas/{{$pergunta->id}}" method="POST">
+    <form action="/duvidas-frequentes/{{$pergunta->id}}" method="POST">
         @csrf
         <div class="form-group">
             <label for="pergunta">Nova pergunta: </label>
@@ -17,7 +17,7 @@
 
 
         <button type="submit" class="btn btn-primary">Enviar</button>
-        <input type="button" name="Cancel" class="btn btn-danger" value="Cancel" onclick="window.location = '/perguntas' " />
+        <input type="button" name="Cancel" class="btn btn-danger" value="Cancel" onclick="window.location = '/duvidas-frequentes' " />
     </form>
 
 

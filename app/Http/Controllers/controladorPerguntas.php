@@ -47,7 +47,7 @@ class controladorPerguntas extends Controller
         $pergunta->pergunta = $request->input('pergunta');
         $pergunta->resposta = $request->input('resposta');
         $pergunta->save();
-        return redirect('/perguntas');
+        return redirect('/duvidas-frequentes');
         
     }
 
@@ -74,7 +74,7 @@ class controladorPerguntas extends Controller
         if (isset($pergunta)){
             return view('editarPergunta', compact('pergunta'));
         }
-        return redirect('perguntas');
+        return redirect('duvidas-frequentes');
     }
 
     /**
@@ -93,7 +93,7 @@ class controladorPerguntas extends Controller
             $pergunta->save();
         }
         
-        return redirect('perguntas');
+        return redirect('duvidas-frequentes');
     }
 
     /**
@@ -108,7 +108,7 @@ class controladorPerguntas extends Controller
         if (isset($pergunta)){
             $pergunta->delete();
         }
-        return redirect('perguntas');
+        return redirect('duvidas-frequentes');
     }
 
     // API

@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('body')
-    <h1> Informações </h1>
+    <h1> Atuação Integrada </h1>
     
     <div class="card border">
         <div class="card-body">
@@ -24,7 +24,7 @@
                             <td>{!!$info->texto!!}</td>
                             <td>{{$info->orgao_id}}</td>
                             <td>
-                                <a href="info/apagar/{{$info->id}}" class="btn btn-sm btn-danger">Apagar</a>
+                                <a href="atuacao-integrada/apagar/{{$info->id}}" class="btn btn-sm btn-danger">Apagar</a>
                             </td>
                         </tr>
                     @endforeach
@@ -35,7 +35,7 @@
     </div>
 
     <div class="card-footer">
-        <a href="/info/novo" class="btn btn-sm btn-primary" role="button">Nova informação</a>
+        <a href="/atuacao-integrada/novo" class="btn btn-sm btn-primary" role="button">Nova informação</a>
         <a href="/orgaos/novo" class="btn btn-sm btn-primary" role="button">Novo órgao</a>
     </div>
     

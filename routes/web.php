@@ -17,12 +17,12 @@ Route::get('/', function () {
 });
 
 //PERGUNTAS
-Route::get('/perguntas', 'controladorPerguntas@index')->middleware('auth');
-Route::get('/perguntas/novo', 'controladorPerguntas@create')->middleware('auth');
-Route::post('/perguntas', 'controladorPerguntas@store')->middleware('auth');
-Route::get('/perguntas/apagar/{id}', 'controladorPerguntas@destroy')->middleware('auth');
-Route::get('/perguntas/editar/{id}', 'controladorPerguntas@edit')->middleware('auth');
-Route::post('/perguntas/{id}', 'controladorPerguntas@update')->middleware('auth');
+Route::get('/duvidas-frequentes', 'controladorPerguntas@index')->middleware('auth');
+Route::get('/duvidas-frequentes/novo', 'controladorPerguntas@create')->middleware('auth');
+Route::post('/duvidas-frequentes', 'controladorPerguntas@store')->middleware('auth');
+Route::get('/duvidas-frequentes/apagar/{id}', 'controladorPerguntas@destroy')->middleware('auth');
+Route::get('/duvidas-frequentes/editar/{id}', 'controladorPerguntas@edit')->middleware('auth');
+Route::post('/duvidas-frequentes/{id}', 'controladorPerguntas@update')->middleware('auth');
 
 //TELEFONES
 Route::get('/telefones', 'controladorTelefones@index')->middleware('auth');
@@ -73,13 +73,13 @@ Route::get('/mapa/apagar/{id}', 'controladorMapa@destroy')->middleware('auth');
 Route::get('mapa/editar/{id}', 'controladorMapa@edit')->middleware('auth');
 Route::post('/mapa/{id}', 'controladorMapa@update')->middleware('auth');
 
-//INFORMAÇÕES
-Route::get('/info', 'controladorInfo@index')->middleware('auth');
-Route::get('/info/novo', 'controladorInfo@create')->middleware('auth');
-Route::post('/info', 'controladorInfo@store')->middleware('auth');
-Route::get('/info/apagar/{id}', 'controladorInfo@destroy')->middleware('auth');
-Route::get('info/editar/{id}', 'controladorInfo@edit')->middleware('auth');
-Route::post('/info/{id}', 'controladorInfo@update')->middleware('auth');
+//ATUAÇÃO INTEGRADA
+Route::get('/atuacao-integrada', 'controladorInfo@index')->middleware('auth');
+Route::get('/atuacao-integrada/novo', 'controladorInfo@create')->middleware('auth');
+Route::post('/atuacao-integrada', 'controladorInfo@store')->middleware('auth');
+Route::get('/atuacao-integrada/apagar/{id}', 'controladorInfo@destroy')->middleware('auth');
+Route::get('atuacao-integrada/editar/{id}', 'controladorInfo@edit')->middleware('auth');
+Route::post('/atuacao-integrada/{id}', 'controladorInfo@update')->middleware('auth');
 
 //ÓRGAOS
 Route::get('/orgaos', 'controladorOrgaos@index')->middleware('auth');

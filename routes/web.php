@@ -89,6 +89,14 @@ Route::get('/orgaos/apagar/{id}', 'controladorOrgaos@destroy')->middleware('auth
 Route::get('orgaos/editar/{id}', 'controladorOrgaos@edit')->middleware('auth');
 Route::post('/orgaos/{id}', 'controladorOrgaos@update')->middleware('auth');
 
+//PLANO DE CONTINGÊNCIA
+Route::get('/plano-contingencia', 'controladorPlano@index')->middleware('auth');
+Route::get('/plano-contingencia/novo', 'controladorPlano@create')->middleware('auth');
+Route::post('/plano-contingencia', 'controladorPlano@store')->middleware('auth');
+Route::get('/plano-contingencia/apagar/{id}', 'controladorPlano@destroy')->middleware('auth');
+Route::get('plano-contingencia/editar/{id}', 'controladorPlano@edit')->middleware('auth');
+Route::post('/plano-contingencia/{id}', 'controladorPlano@update')->middleware('auth');
+
 
 //SUMMERNOTE
 Route::get('summernote',array('as'=>'summernote.get','uses'=>'FileController@getSummernote'));

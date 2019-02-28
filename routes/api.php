@@ -31,3 +31,5 @@ Route::get('v1/banners/', 'controladorBanner@banners')->middleware('cors');
 
 Route::get('v1/informacoes/', 'controladorInfo@informacoes')->middleware('cors');
 
+Route::get('v1/plano/', 'controladorPlano@plano')->middleware('cors');
+

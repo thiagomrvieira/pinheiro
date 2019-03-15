@@ -22,6 +22,7 @@
                             <td>{{$plan->titulo}}</td>
                             <td>{!!$plan->text!!}</td>
                             <td>
+                                <a href="plano-contingencia/editar/{{$plan->id}}" class="btn btn-sm btn-primary">Editar</a>
                                 <a href="plano-contingencia/apagar/{{$plan->id}}" class="btn btn-sm btn-danger">Apagar</a>
                             </td>
                         </tr>

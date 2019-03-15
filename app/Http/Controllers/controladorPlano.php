@@ -63,7 +63,11 @@ class ControladorPlano extends Controller
      */
     public function edit($id)
     {
-        //
+        $plano = Plano::find($id);
+        if (isset($plano)) {
+            return view('editarPlano', compact('plano'));
+        }
+        return redirect('plano-contingencia');
     }
 
     /**
@@ -75,7 +79,13 @@ class ControladorPlano extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $plano = Plano::find($id);
+        if (isset($plano)) {
+            $plano->titulo = $request->input('titulo');
+            $plano->text = $request->input('texto');
+            $plano->save();
+        }
+        return redirect('plano-contingencia');
     }
 
     /**

@@ -4,14 +4,14 @@ Historicamente, o bairro Pinheiro, localizado no município de Maceió (AL), vem
 
 O evento produziu danos significativos, como fissuras, trincas e rachaduras em edificações, ruas e passeios em uma área expressiva do bairro, inclusive com a interdição de diversas moradias.
 
-<a href="http://www.cprm.gov.br/publique/Gestao-Territorial/Prevencao-de-Desastres-Naturais/Acao-Emergencial-no-Bairro-Pinheiro-%28Maceio%2C-AL%29-5344.html"> Fonte<a/>
+<a href="http://www.cprm.gov.br/publique/Gestao-Territorial/Prevencao-de-Desastres-Naturais/Acao-Emergencial-no-Bairro-Pinheiro-%28Maceio%2C-AL%29-5344.html" target="_blank"> Fonte<a/>
 
 Diante do exposto, o estado de Alagoas iniciou o desenvolvimento de soluções como website e app para dispositívos móveis. 
 
 ## Sobre o Software
 
 Projeto desenvolvido em PHP usando o framework Laravel. 
-O software foi desenvolvido com a finalidade de gerir o conteúdo que alimenta, através de uma API, o <a href="http://pinheiro.al.gov.br"> website </a> com informações para o cidadão bem como o aplicativo.  
+O software foi desenvolvido com a finalidade de gerir o conteúdo que alimenta, através de uma API, o <a href="http://pinheiro.al.gov.br" target="_blank"> website </a> com informações para o cidadão bem como o aplicativo.  
 
 Módulos:
 

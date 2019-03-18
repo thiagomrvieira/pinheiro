@@ -66,8 +66,19 @@ class controladorInfo extends Controller
      */
     public function edit($id)
     {
-        //
-    }
+        $orgaos = Orgao::all();
+
+        $informacao = Info::find($id);
+        if (isset($informacao)) {
+            return view('editarInfo', compact('informacao', 'orgaos'));
+        }
+
+
+        return redirect('atuacao-integrada');
+
+    }  
+
+
 
     /**
      * Update the specified resource in storage.
@@ -78,7 +89,14 @@ class controladorInfo extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $informacao = Info::find($id);
+        if (isset($informacao)) {
+            $informacao->titulo = $request->input('titulo');
+            $informacao->texto = $request->input('texto');
+            $informacao->orgao_id = $request->input('orgao');
+            $informacao->save();
+           }
+           return redirect('atuacao-integrada');       
     }
 
     /**

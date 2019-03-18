@@ -6,7 +6,7 @@ O evento produziu danos significativos, como fissuras, trincas e rachaduras em e
 
 <a href="http://www.cprm.gov.br/publique/Gestao-Territorial/Prevencao-de-Desastres-Naturais/Acao-Emergencial-no-Bairro-Pinheiro-%28Maceio%2C-AL%29-5344.html" target="_blank"> Fonte<a/>
 
-Diante do exposto, o estado de Alagoas iniciou o desenvolvimento de soluções como website e app para dispositívos móveis. 
+Diante do exposto, o estado de Alagoas iniciou o desenvolvimento de soluções como website e app para dispositívos móveis para informar o cidadão morador da área de risco.
 
 ## Sobre o Software
 

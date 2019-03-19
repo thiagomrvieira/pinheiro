@@ -34,3 +34,4 @@ Route::get('v1/atuacao/', 'controladorInfo@informacoes')->middleware('cors');
 
 Route::get('v1/plano/', 'controladorPlano@plano')->middleware('cors');
 
+Route::get('v1/termos/', 'controladorTermos@termos')->middleware('cors');

@@ -103,4 +103,12 @@ class controladorTermos extends Controller
         }
         return redirect('termos');
     }
+
+
+    //API 
+    public function termos(){
+        $termos = Termo::all();
+        return response()->json($termos);
+    }
+
 }

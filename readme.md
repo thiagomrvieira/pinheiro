@@ -4,7 +4,7 @@ Historicamente, o bairro Pinheiro, localizado no município de Maceió (AL), vem
 
 O evento produziu danos significativos, como fissuras, trincas e rachaduras em edificações, ruas e passeios em uma área expressiva do bairro, inclusive com a interdição de diversas moradias.
 
-<a href="http://www.cprm.gov.br/publique/Gestao-Territorial/Prevencao-de-Desastres-Naturais/Acao-Emergencial-no-Bairro-Pinheiro-%28Maceio%2C-AL%29-5344.html" target="_blank"> Fonte<a/>
+Fonte: <a href="http://www.cprm.gov.br/publique/Gestao-Territorial/Prevencao-de-Desastres-Naturais/Acao-Emergencial-no-Bairro-Pinheiro-%28Maceio%2C-AL%29-5344.html" target="_blank"> CPRM<a/>
 
 Diante do exposto, o estado de Alagoas iniciou o desenvolvimento de soluções como website e app para dispositívos móveis para informar o cidadão morador da área de risco.
 

@@ -16,6 +16,7 @@
       <a class="nav-link" href="/mapa">Mapa</a>
       <a class="nav-link" href="/atuacao-integrada">Atuação Integrada</a>
       <a class="nav-link" href="/plano-contingencia">Plano de Contingência</a>
+      <a class="nav-link" href="/termos">Termos de uso</a>
     </div>
   </div>
 </nav>

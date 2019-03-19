@@ -78,7 +78,7 @@ Route::get('/atuacao-integrada', 'controladorInfo@index')->middleware('auth');
 Route::get('/atuacao-integrada/novo', 'controladorInfo@create')->middleware('auth');
 Route::post('/atuacao-integrada', 'controladorInfo@store')->middleware('auth');
 Route::get('/atuacao-integrada/apagar/{id}', 'controladorInfo@destroy')->middleware('auth');
-Route::get('atuacao-integrada/editar/{id}', 'controladorInfo@edit')->middleware('auth');
+Route::get('/atuacao-integrada/editar/{id}', 'controladorInfo@edit')->middleware('auth');
 Route::post('/atuacao-integrada/{id}', 'controladorInfo@update')->middleware('auth');
 
 //ÓRGAOS
@@ -96,6 +96,14 @@ Route::post('/plano-contingencia', 'controladorPlano@store')->middleware('auth')
 Route::get('/plano-contingencia/apagar/{id}', 'controladorPlano@destroy')->middleware('auth');
 Route::get('plano-contingencia/editar/{id}', 'controladorPlano@edit')->middleware('auth');
 Route::post('/plano-contingencia/{id}', 'controladorPlano@update')->middleware('auth');
+
+//TERMOS DE USO
+Route::get('/termos', 'controladorTermos@index')->middleware('auth');
+Route::get('/termos/novo', 'controladorTermos@create')->middleware('auth');
+Route::post('/termos', 'controladorTermos@store')->middleware('auth');
+Route::get('/termos/apagar/{id}', 'controladorTermos@destroy')->middleware('auth');
+Route::get('/termos/editar/{id}', 'controladorTermos@edit')->middleware('auth');
+Route::post('/termos/{id}', 'controladorTermos@update')->middleware('auth');
 
 
 //SUMMERNOTE

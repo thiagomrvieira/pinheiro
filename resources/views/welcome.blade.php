@@ -98,6 +98,7 @@
                 <div class="links">
                     <a href="/atuacao-integrada">Atuação Integrada</a>
                     <a href="/plano-contingencia">Plano Contingencia</a>
+                    <a href="/termos">Termos de uso</a>
                     
                     
                 </div>

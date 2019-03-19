@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AlteraTipoDadoTablePlanos extends Migration
+class CreateTermosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class AlteraTipoDadoTablePlanos extends Migration
      */
     public function up()
     {
-        Schema::table('planos', function (Blueprint $table) {
-            //$table->longText('text')->after('id');
+        Schema::create('termos', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('titulo');
+            $table->string('texto');
+            $table->timestamps();
         });
     }
 
@@ -25,8 +28,6 @@ class AlteraTipoDadoTablePlanos extends Migration
      */
     public function down()
     {
-        Schema::table('planos', function (Blueprint $table) {
-            $table->dropColumn('texto');
-        });
+        Schema::dropIfExists('termos');
     }
 }

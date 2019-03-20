@@ -57,6 +57,7 @@ class controladorNoticias extends Controller
         
         //$noticia->imagemCapa = $caminho . DIRECTORY_SEPARATOR . $nome;
         $noticia->imagemCapa = 'http://api.itec.al.gov.br/imgNoticias' . DIRECTORY_SEPARATOR . $nome;
+        $noticia->autoriaImagem = $request->input('autoria');
         $noticia->save();
 
         return redirect('/noticias');
@@ -118,7 +119,8 @@ class controladorNoticias extends Controller
             
             //$noticia->imagemCapa = $caminho . DIRECTORY_SEPARATOR . $nome;
             $noticia->imagemCapa = 'http://api.itec.al.gov.br/imgNoticias' . DIRECTORY_SEPARATOR . $nome;
-        
+            $noticia->autoriaImagem = $request->input('autoria');
+
 
             $noticia->save();
            

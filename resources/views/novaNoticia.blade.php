@@ -8,7 +8,11 @@
         @csrf
         <div class="form-group">
             <label for="imagem">Imagem</label>
-            <input type='file' id="imagemCapa" name="imagemCapa"/ required>
+            <input type='file' id="imagemCapa" name="imagemCapa" required>
+        </div>
+        <div class="form-group">
+            <label for="autoria">Autoria da imagem</label>
+            <input type="text" class="form-control" name="autoria" id="autoria" required>
         </div>
         <div class="form-group">
             <label for="titulo">Título</label>

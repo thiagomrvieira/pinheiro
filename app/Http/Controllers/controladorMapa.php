@@ -71,7 +71,13 @@ class controladorMapa extends Controller
      */
     public function edit($id)
     {
-        //
+        $mapa = Mapa::find($id);
+        if (isset($mapa)) {
+            return view('editarMapa', compact('mapa'));
+        }
+
+
+
     }
 
     /**
@@ -83,7 +89,21 @@ class controladorMapa extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $mapa = Mapa::find($id);
+        if (isset($mapa)) {
+            $mapa->titulo = $request->input('titulo');
+            $mapa->texto = $request->input('texto');
+            $mapa->link = $request->input('link');
+            
+            $arquivo = $request->file('arquivo');
+            $nome = $input['imagename'] = time() . "." . $arquivo->getClientOriginalExtension();
+            $caminho = $destinationPath = public_path('arquivosMapa');
+            $arquivo->move($destinationPath, $input['imagename']);
+            
+            $mapa->arquivo = $caminho . DIRECTORY_SEPARATOR . $nome;
+            $mapa->save();
+            return redirect('/mapa');
+        }
     }
 
     /**

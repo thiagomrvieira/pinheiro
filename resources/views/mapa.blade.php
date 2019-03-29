@@ -26,6 +26,7 @@
                             <td>{{$map->link}}</td>
                             <td>{{$map->arquivo}}</td>
                             <td>
+                                <a href="mapa/editar/{{$map->id}}" class="btn btn-sm btn-primary">Editar</a>
                                 <a href="mapa/apagar/{{$map->id}}" class="btn btn-sm btn-danger">Apagar</a>
                             </td>
                         </tr>
@@ -37,6 +38,7 @@
     </div>
 
     <div class="card-footer">
+        
         <a href="/mapa/novo" class="btn btn-sm btn-primary" role="button">Novo mapa</a>
     
     </div>

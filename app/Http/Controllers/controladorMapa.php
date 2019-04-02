@@ -121,4 +121,12 @@ class controladorMapa extends Controller
         }
         return redirect('mapa');
     }
+
+    // API
+    public function mapa()
+    {
+        $mapa = Mapa::all();
+        return response()->json($mapa);
+    }
+
 }

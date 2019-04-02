@@ -45,6 +45,7 @@ class controladorTelefones extends Controller
         $telefone = new telefone();
         $telefone->nome = $request->input('orgao');
         $telefone->numero = $request->input('telefone');
+        $telefone->intro = $request->input('intro');
         $telefone->competencias = $request->input('competencias');
         $telefone->save();
         return redirect('/telefones');
@@ -89,6 +90,7 @@ class controladorTelefones extends Controller
         if (isset($telefone)){
             $telefone->nome = $request->input('orgao');
             $telefone->numero = $request->input('telefone');
+            $telefone->intro = $request->input('intro');
             $telefone->competencias = $request->input('competencias');  
             $telefone->save();
         }

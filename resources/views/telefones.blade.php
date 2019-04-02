@@ -12,6 +12,7 @@
                         <th>ID</th>
                         <th>Órgão</th>
                         <th>Telefone</th>
+                        <th>Intro</th>
                         <th>Competências</th>
                         <th>Ações</th>
                     </tr>
@@ -22,6 +23,7 @@
                             <td>{{$fone->id}}</td>
                             <td>{{$fone->nome}}</td>
                             <td>{{$fone->numero}}</td>
+                            <td>{{$fone->intro}}</td>
                             <td>{!!$fone->competencias!!}</td>
                             <td>
                                 <a href="/telefones/editar/{{$fone->id}}" class="btn btn-sm btn-primary">Editar</a>

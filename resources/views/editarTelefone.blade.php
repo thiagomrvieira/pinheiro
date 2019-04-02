@@ -14,6 +14,12 @@
             <label for="telefone">Telefone: </label><br>
             <input type="tel" class="form-control" name="telefone" id="telefone" value="{{$tel->numero}} ">
         </div>
+
+        <div class="form-group">
+            <label for="intro">Intro</label>
+            <textarea class="form-control" name="intro" id="intro" rows="5" required> {!!$tel->intro!!}</textarea>
+        </div>
+
         <div class="form-group">
             <label for="competencias">Competências</label>
             <textarea class="form-control" name="competencias" id="texto" rows="5">{!!$tel->competencias!!}</textarea>

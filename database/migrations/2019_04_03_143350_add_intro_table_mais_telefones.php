@@ -13,7 +13,7 @@ class AddIntroTableMaisTelefones extends Migration
      */
     public function up()
     {
-        Schema::table('mais_phptelefones', function (Blueprint $table) {
+        Schema::table('mais_telefones', function (Blueprint $table) {
             $table->string('intro')->after('nome');
         });
     }

@@ -32,6 +32,15 @@ Route::get('/telefones/apagar/{id}', 'controladorTelefones@destroy')->middleware
 Route::get('/telefones/editar/{id}', 'controladorTelefones@edit')->middleware('auth');
 Route::post('/telefones/{id}', 'controladorTelefones@update')->middleware('auth');
 
+//MAIS TELEFONES ÚTEIS
+Route::get('/mais-telefones', 'controladorMaisTelefones@index')->middleware('auth');
+Route::get('/mais-telefones/novo', 'controladorMaisTelefones@create')->middleware('auth');
+Route::post('/mais-telefones', 'controladorMaisTelefones@store')->middleware('auth');
+Route::get('/mais-telefones/apagar/{id}', 'controladorMaisTelefones@destroy')->middleware('auth');
+Route::get('/mais-telefones/editar/{id}', 'controladorMaisTelefones@edit')->middleware('auth');
+Route::post('/mais-telefones/{id}', 'controladorMaisTelefones@update')->middleware('auth');
+
+
 //NOTÍCIAS
 Route::get('/noticias', 'controladorNoticias@index')->middleware('auth');
 Route::get('/noticias/novo', 'controladorNoticias@create')->middleware('auth');
@@ -116,3 +125,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+

@@ -5,7 +5,7 @@
     
     <div class="card border">
         <div class="card-body">
-            <h5 class= "card-title"> Inserir, editar e apagar 3 telefones na Home</h5>
+            <h5 class= "card-title"> Inserir, editar e apagar <b>telefones principais</b></h5>
             <table class="table table-ordered table-hover">
                 <thead>
                     <tr>
@@ -23,7 +23,7 @@
                             <td>{{$fone->id}}</td>
                             <td>{{$fone->nome}}</td>
                             <td>{{$fone->numero}}</td>
-                            <td>{{$fone->intro}}</td>
+                            <td>{!!$fone->intro!!}</td>
                             <td>{!!$fone->competencias!!}</td>
                             <td>
                                 <a href="/telefones/editar/{{$fone->id}}" class="btn btn-sm btn-primary">Editar</a>
@@ -37,10 +37,13 @@
     
     </div>
 
+
     <div class="card-footer">
         <a href="/telefones/novo" class="btn btn-sm btn-primary" role="button">Novo telefone</a>
-    
+        <a href="/mais-telefones" class="btn btn-sm btn-primary" role="button">Mais telefones</a>
     </div>
+    
+    
     
 
 @endsection

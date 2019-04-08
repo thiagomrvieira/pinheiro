@@ -16,6 +16,11 @@
         </div>
 
         <div class="form-group">
+            <label for="classe">Classe</label>
+            <input type="text" class="form-control" name="classe" id="classe" value="{{$tel->classe}}" required>
+        </div>
+
+        <div class="form-group">
             <label for="intro">Intro</label>
             <textarea class="form-control" name="intro" id="intro" rows="5" required> {!!$tel->intro!!}</textarea>
         </div>

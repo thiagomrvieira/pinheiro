@@ -12,6 +12,7 @@
                         <th>ID</th>
                         <th>Órgão</th>
                         <th>Telefone</th>
+                        <th>Classe</th>
                         <th>Intro</th>
                         <th>Competências</th>
                         <th>Ações</th>
@@ -23,6 +24,7 @@
                             <td>{{$fone->id}}</td>
                             <td>{{$fone->nome}}</td>
                             <td>{{$fone->numero}}</td>
+                            <td>{{$fone->classe}}</td>
                             <td>{!!$fone->intro!!}</td>
                             <td>{!!$fone->competencias!!}</td>
                             <td>

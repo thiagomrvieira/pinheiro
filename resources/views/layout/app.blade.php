@@ -19,6 +19,7 @@
             @component('component_Nav');
             @endcomponent
 
+
             @hasSection('body')
                 @yield('body')
 

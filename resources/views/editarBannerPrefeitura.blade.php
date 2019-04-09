@@ -12,6 +12,11 @@
         </div>
 
         <div class="form-group">
+            <label for="imgMobile">Imagem Mobile</label>
+            <input type='file' id="imgMobile" name="imgMobile" required>
+        </div>
+
+        <div class="form-group">
             <label for="link">Link</label>
             <input type="text" class="form-control" name="link" id="link" value="{{$banner->link}}">
         </div>

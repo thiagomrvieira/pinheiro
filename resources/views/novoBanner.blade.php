@@ -10,6 +10,11 @@
             <label for="imagem">Imagem</label>
             <input type='file' id="imagem" name="imagem"/ required>
         </div>
+
+        <div class="form-group">
+            <label for="imgMobile">Imagem Mobile</label>
+            <input type='file' id="imgMobile" name="imgMobile" required>
+        </div>
         
         <div class="form-group">
             <label for="link">Link</label>

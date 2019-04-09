@@ -46,9 +46,18 @@ class controladorPrefeituraBanner extends Controller
         $nome = $input['imagename'] = time() . "." . $imagem->getClientOriginalExtension();
         $caminho = $destinationPath = public_path('imgBanners');
         $imagem->move($destinationPath, $input['imagename']);
-        
         //$banner->imagem = $caminho . DIRECTORY_SEPARATOR . $nome;
         $banner->imagem = 'http://api.itec.al.gov.br/imgBanners' . DIRECTORY_SEPARATOR . $nome;
+        
+        //imagem mobile
+        $img = $request->file('imgMobile');
+        $name = $input['imagename'] = time() . "." . $img->getClientOriginalExtension();
+        $caminho = $destinationPath = public_path('imgMobile');
+        $img->move($destinationPath, $input['imagename']);
+        //$banner->imagem = $caminho . DIRECTORY_SEPARATOR . $nome;
+        $banner->imgMobile = 'http://api.itec.al.gov.br/imgMobile' . DIRECTORY_SEPARATOR . $name;
+        
+        
         $banner->save();
         return redirect('/prefeitura/banners');
     }

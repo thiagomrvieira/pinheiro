@@ -11,6 +11,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Imagem</th>
+                        <th>Imagem Mobile</th>
                         <th>Link</th>
                         <th>Descrição</th>
                         <th>Ações</th>
@@ -21,6 +22,7 @@
                         <tr>
                             <td>{{$b->id}}</td>
                             <td>{{$b->imagem}}</td>
+                            <td>{{$b->imgMobile}}</td>
                             <td>{{$b->link}}</td>
                             <td>{{$b->descricao}}</td>
                             <td>

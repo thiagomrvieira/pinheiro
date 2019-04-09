@@ -42,7 +42,7 @@ class controladorBanner extends Controller
     {
         $banner = new Banner();
         $banner->descricao = $request->input('descricao');
-        
+        $banner->link = $request->input('link');
         
         $imagem = $request->file('imagem');
         $nome = $input['imagename'] = time() . "." . $imagem->getClientOriginalExtension();
@@ -93,6 +93,8 @@ class controladorBanner extends Controller
         $banner = Banner::find($id);
         if (isset($banner)) {
             $banner->imagem = $request->input('imagem');
+            $banner->link = $request->input('link');
+
             $banner->descricao = $request->input('descricao');
             $banner->save();
         }

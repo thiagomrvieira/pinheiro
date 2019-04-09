@@ -11,6 +11,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Imagem</th>
+                        <th>Link</th>
                         <th>Descrição</th>
                         <th>Ações</th>
                     </tr>
@@ -20,6 +21,7 @@
                         <tr>
                             <td>{{$b->id}}</td>
                             <td>{{$b->imagem}}</td>
+                            <td>{{$b->link}}</td>
                             <td>{{$b->descricao}}</td>
                             <td>
                                 <a href="banners/editar/{{$b->id}}" class="btn btn-sm btn-primary">Editar</a>

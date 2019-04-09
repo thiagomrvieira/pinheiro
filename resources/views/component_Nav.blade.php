@@ -47,7 +47,7 @@
           Prefeitura
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="/atuacao-integrada">Banner</a>
+          <a class="dropdown-item" href="/prefeitura/banners">Banner</a>
        </div>
       </li>
 

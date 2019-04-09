@@ -126,3 +126,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+// -- prefeitura --
+Route::group(['middleware' => 'auth', 'prefix' => 'prefeitura'], function () { 
+    Route::get('/banners', 'controladorPrefeituraBanner@index');
+    Route::get('/banners/novo', 'controladorPrefeituraBanner@create');
+    Route::post('/banners', 'controladorPrefeituraBanner@store');
+    Route::get('/banners/apagar/{id}', 'controladorPrefeituraBanner@destroy');
+    Route::get('/banners/editar/{id}', 'controladorPrefeituraBanner@edit');
+    Route::post('/banners/{id}', 'controladorPrefeituraBanner@update');
+
+});

@@ -1,10 +1,10 @@
 @extends('layout.app')
 
 @section('body')
-    <h1> Editar banner</h1>
+    <h1>Prefeitura: Editar banner</h1>
 
 
-    <form action="/banners/{{$banner->id}}" method="POST" style="padding-bottom: 25px;">
+    <form action="/prefeitura/banners/{{$banner->id}}" method="POST" style="padding-bottom: 25px;">
         @csrf
         <div class="form-group">
             <label for="imagem">Imagem</label>
@@ -23,7 +23,7 @@
        
         
         <button type="submit" class="btn btn-primary">Enviar</button>
-        <input type="button" name="Cancel" class="btn btn-danger" value="Cancel" onclick="window.location = '/banners' " />
+        <input type="button" name="Cancel" class="btn btn-danger" value="Cancel" onclick="window.location = '/prefeitura/banners' " />
     </form>
 
 

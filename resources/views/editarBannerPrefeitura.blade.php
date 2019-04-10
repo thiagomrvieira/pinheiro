@@ -4,16 +4,16 @@
     <h1>Prefeitura: Editar banner</h1>
 
 
-    <form action="/prefeitura/banners/{{$banner->id}}" method="POST" style="padding-bottom: 25px;">
+    <form action="/prefeitura/banners/{{$banner->id}}" method="POST" style="padding-bottom: 25px;" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="imagem">Imagem</label>
-            <input type='file' id="imagem" name="imagem" value="{{$banner->imagem}}" required>
+            <input type='file' id="imagem" name="imagem" value="{{$banner->imagem}}">
         </div>
 
         <div class="form-group">
             <label for="imgMobile">Imagem Mobile</label>
-            <input type='file' id="imgMobile" name="imgMobile" required>
+            <input type='file' id="imgMobile" name="imgMobile">
         </div>
 
         <div class="form-group">

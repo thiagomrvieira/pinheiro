@@ -40,5 +40,5 @@ Route::get('v1/termos/', 'controladorTermos@termos')->middleware('cors');
 
 Route::get('v1/mapa/', 'controladorMapa@mapa')->middleware('cors');
 
-Route::get('v1/banners/prefeitura', 'controladorPrefeituraBanner@bannersPrefeitura')->middleware('cors');
+Route::get('v1/prefeitura/banners', 'controladorPrefeituraBanner@bannersPrefeitura')->middleware('cors');
 

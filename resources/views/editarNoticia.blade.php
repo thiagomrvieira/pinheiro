@@ -1,14 +1,14 @@
 @extends('layout.app')
 
 @section('body')
-    <h1> Editar pergunta</h1>
+    <h1> Editar notícia</h1>
 
 
     <form action="/noticias/{{$noticia->id}}" method="POST" style="padding-bottom: 25px;">
         @csrf
         <div class="form-group">
             <label for="imagem">Imagem</label>
-            <input type='file' id="imagemCapa" name="imagemCapa" required>
+            <input type='file' id="imagemCapa" name="imagemCapa">
         </div>
         <div class="form-group">
             <label for="titulo">Título</label>

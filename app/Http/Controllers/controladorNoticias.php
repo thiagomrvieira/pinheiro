@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Noticia;
 
+use Illuminate\Support\Facades\Storage;
+
+
 class controladorNoticias extends Controller
 {
     // AUTENTICAÇÃO
@@ -54,9 +57,8 @@ class controladorNoticias extends Controller
         $nome = $input['imagename'] = time() . "." . $imagemCapa->getClientOriginalExtension();
         $caminho = $destinationPath = public_path('imgNoticias');
         $imagemCapa->move($destinationPath, $input['imagename']);
-        
-        //$noticia->imagemCapa = $caminho . DIRECTORY_SEPARATOR . $nome;
         $noticia->imagemCapa = 'http://api.itec.al.gov.br/imgNoticias' . DIRECTORY_SEPARATOR . $nome;
+        //$noticia->imagemCapa = 'http://127.0.0.1:8000/imgNoticias' . DIRECTORY_SEPARATOR . $nome;
         $noticia->autoriaImagem = $request->input('autoria');
         $noticia->save();
 
@@ -111,8 +113,8 @@ class controladorNoticias extends Controller
             $noticia->reporter = $request->input('reporter');
             $noticia->texto = $request->input('texto');
             $noticia->autoriaImagem = $request->input('autoria');
-            //imagem capa
             
+            //imagem capa
             if ($request->hasFile('imagemCapa')) {
                 Storage::delete($noticia->imagemCapa);
                 $imagemCapa = $request->file('imagemCapa');
@@ -120,6 +122,8 @@ class controladorNoticias extends Controller
                 $caminho = $destinationPath = public_path('imgNoticias');
                 $imagemCapa->move($destinationPath, $input['imagename']);
                 $noticia->imagemCapa = 'http://api.itec.al.gov.br/imgNoticias' . DIRECTORY_SEPARATOR . $nome;
+                //$noticia->imagemCapa = 'http://127.0.0.1:8000/imgNoticias' . DIRECTORY_SEPARATOR . $nome;
+            
             }
 
             $noticia->save();

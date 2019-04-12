@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Banner;
+use Illuminate\Support\Facades\Storage;
+
 
 class controladorBanner extends Controller
 {
@@ -48,16 +50,16 @@ class controladorBanner extends Controller
         $nome = $input['imagename'] = time() . "." . $imagem->getClientOriginalExtension();
         $caminho = $destinationPath = public_path('imgBanners');
         $imagem->move($destinationPath, $input['imagename']);
-        //$banner->imagem = $caminho . DIRECTORY_SEPARATOR . $nome;
         $banner->imagem = 'http://api.itec.al.gov.br/imgBanners' . DIRECTORY_SEPARATOR . $nome;
+        //$banner->imagem = 'http://127.0.0.1:8000/imgBanners' . DIRECTORY_SEPARATOR . $nome;
         
         //imagem mobile
         $img = $request->file('imgMobile');
         $name = $input['imagename'] = time() . "." . $img->getClientOriginalExtension();
         $caminho = $destinationPath = public_path('imgMobile');
         $img->move($destinationPath, $input['imagename']);
-        //$banner->imagem = $caminho . DIRECTORY_SEPARATOR . $nome;
         $banner->imgMobile = 'http://api.itec.al.gov.br/imgMobile' . DIRECTORY_SEPARATOR . $name;
+        //$banner->imgMobile = 'http://127.0.0.1:8000/imgMobile' . DIRECTORY_SEPARATOR . $name;
         
         $banner->save();
         return redirect('/banners');
@@ -111,17 +113,19 @@ class controladorBanner extends Controller
                 $caminho = $destinationPath = public_path('imgBanners');
                 $imagem->move($destinationPath, $input['imagename']);
                 $banner->imagem = 'http://api.itec.al.gov.br/imgBanners' . DIRECTORY_SEPARATOR . $nome;
+                //$banner->imagem = 'http://127.0.0.1:8000/imgBanners' . DIRECTORY_SEPARATOR . $nome;
             }
             
             
             //Imagem mobile
             if ($request->hasFile('imgMobile')) {
-                Storage::delete($banner->imagem);
+                Storage::delete($banner->imgMobile);
                 $img = $request->file('imgMobile');
                 $name = $input['imagename'] = time() . "." . $img->getClientOriginalExtension();
                 $caminho = $destinationPath = public_path('imgMobile');
                 $img->move($destinationPath, $input['imagename']);
                 $banner->imgMobile = 'http://api.itec.al.gov.br/imgMobile' . DIRECTORY_SEPARATOR . $name;
+                //$banner->imgMobile = 'http://127.0.0.1:8000/imgMobile' . DIRECTORY_SEPARATOR . $name;
             }
             
             

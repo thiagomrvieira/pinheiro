@@ -21,8 +21,8 @@
                     @foreach ($banner as $b)
                         <tr>
                             <td>{{$b->id}}</td>
-                            <td>{{$b->imagem}}</td>
-                            <td>{{$b->imgMobile}}</td>
+                            <td><img src="{{$b->imagem}}" height="80" width="80"></td>
+                            <td><img src="{{$b->imgMobile}}" height="80" width="80"></td>
                             <td>{{$b->link}}</td>
                             <td>{{$b->descricao}}</td>
                             <td>

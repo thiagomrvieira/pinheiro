@@ -4,7 +4,7 @@
     <h1> Editar notícia</h1>
 
 
-    <form action="/noticias/{{$noticia->id}}" method="POST" style="padding-bottom: 25px;">
+    <form action="/noticias/{{$noticia->id}}" method="POST" style="padding-bottom: 25px;" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="imagem">Imagem</label>

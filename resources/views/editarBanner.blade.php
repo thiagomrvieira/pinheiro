@@ -4,7 +4,7 @@
     <h1> Editar banner</h1>
 
 
-    <form action="/banners/{{$banner->id}}" method="POST" style="padding-bottom: 25px;">
+    <form action="/banners/{{$banner->id}}" method="POST" style="padding-bottom: 25px;" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="imagem">Imagem</label>

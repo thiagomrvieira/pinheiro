@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('v1/noticias/', 'controladorNoticias@noticias')->middleware('cors');
 Route::get('v1/noticias/capa', 'controladorNoticias@capa')->middleware('cors');
-Route::get('v1/noticias/{id}', 'controladorNoticias@noticia')->middleware('cors');
+Route::get('v1/noticias/{slug}', 'controladorNoticias@noticia')->middleware('cors');
 
 Route::get('v1/duvidas/', 'controladorPerguntas@perguntas')->middleware('cors');
 

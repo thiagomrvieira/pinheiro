@@ -147,7 +147,7 @@ class controladorNoticias extends Controller
         return redirect('noticias');
     }
 
-    // API
+    // API - - - - - - - - - - - - - - - - 
     public function noticias()
     {
         $noticias = Noticia::all();
@@ -160,12 +160,12 @@ class controladorNoticias extends Controller
         return response()->json($noticias);
     }
 
-    public function noticia($id)
+    public function noticia(Noticia $slug)
     {
-        $noticia = Noticia::find($id);
-        if (isset($noticia)){
-            return response()->json($noticia);
-        }
+        //$noticia = Noticia::find($slug);
+        //if (isset($noticia)){
+            return response()->json($slug);
+        //}
     }
 
 }

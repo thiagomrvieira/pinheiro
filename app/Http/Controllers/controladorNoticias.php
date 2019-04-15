@@ -51,6 +51,7 @@ class controladorNoticias extends Controller
         $noticia->intro = $request->input('intro');
         $noticia->reporter = $request->input('reporter');
         $noticia->texto = $request->input('texto');
+        $noticia->slug = str_replace(' ', '-', strtolower($request->input('titulo')));
 
         //imagem capa
         $imagemCapa = $request->file('imagemCapa');
@@ -72,12 +73,10 @@ class controladorNoticias extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Noticia $noticia)
     {
-        $noticia = Noticia::find($id);
-        if (isset($noticia)){
-            return view('noticia', compact('noticia'));
-        }
+        return view('noticia', compact('noticia'));
+    
     }
 
     /**
@@ -113,7 +112,7 @@ class controladorNoticias extends Controller
             $noticia->reporter = $request->input('reporter');
             $noticia->texto = $request->input('texto');
             $noticia->autoriaImagem = $request->input('autoria');
-            
+            $noticia->slug = str_replace(' ', '-', strtolower($request->input('titulo')));
             //imagem capa
             if ($request->hasFile('imagemCapa')) {
                 Storage::delete($noticia->imagemCapa);

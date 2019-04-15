@@ -47,6 +47,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Título</th>
+                        <th>Alias</th>
                         <th>Imagem</th>
                         <th>Autoria</th>
                         <th>Chapéu</th>
@@ -61,6 +62,7 @@
                         <tr>
                             <td>{{$not->id}}</td>
                             <td> <div class="texto">{{$not->titulo}}</div></td>
+                            <td>{{$not->slug}}</td>
                             <td><img src={{$not->imagemCapa}} alt="capa" height="80" width="80"></td>
                             <td >{{$not->autoriaImagem}}</td>
                             <td >{{$not->chapeu}}</td>

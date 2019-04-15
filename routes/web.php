@@ -44,7 +44,7 @@ Route::post('/mais-telefones/{id}', 'controladorMaisTelefones@update')->middlewa
 //NOTÍCIAS
 Route::get('/noticias', 'controladorNoticias@index')->middleware('auth');
 Route::get('/noticias/novo', 'controladorNoticias@create')->middleware('auth');
-Route::get('/noticias/{id}', 'controladorNoticias@show')->middleware('auth');
+Route::get('/noticias/{noticia}', 'controladorNoticias@show')->middleware('auth');
 Route::post('/noticias', 'controladorNoticias@store')->middleware('auth');
 Route::get('/noticias/apagar/{id}', 'controladorNoticias@destroy')->middleware('auth');
 Route::get('noticias/editar/{id}', 'controladorNoticias@edit')->middleware('auth');
